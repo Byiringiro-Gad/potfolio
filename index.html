@@ -3,210 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYIRINGIRO GAD | Software Engineer</title>
+    <title>Byiringiro Gad | Backend Architect & Systems Student</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+<body class="dark-theme">
+    <!-- Innovation 1: Neural Network Canvas Background -->
+    <canvas id="neural-canvas" aria-hidden="true"></canvas>
+
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="cursor-glow" id="cursor-glow"></div>
 
     <header id="header">
-        <div class="container">
-            <nav>
-                <a href="#home" class="logo" aria-label="BG Home">BG</a>
-                <ul class="nav-links" role="list">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#projects">Work</a></li>
-                    <li><a href="#skills">Stack</a></li>
-                    <li><a href="#cv">Resume</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="container">
+            <a href="#home" class="nav-logo">GAD<span>.</span></a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Entry</a></li>
+                <li><a href="#projects" class="nav-link">Artifacts</a></li>
+                <li><a href="#skills" class="nav-link">Intelligence</a></li>
+                <li><a href="#cv" class="nav-link">Dossier</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section id="home" aria-labelledby="hero-name">
-            <div class="container">
+        <section id="home" class="hero-section">
+            <div class="container grid-2">
                 <div class="hero-content">
-                    <div class="hero-text">
-                        <h2 class="reveal-text">Software Engineering Student</h2>
-                        <h1 id="hero-name" class="reveal-text">Byiringiro<br>Gad</h1>
-                        <p class="hero-description reveal-text">I am a software engineering student who enjoys learning new things and solving real problems through technology. Focused on high-performance backend systems and data architecture.</p>
-                        <div class="hero-actions reveal-text">
-                            <a href="#projects" class="btn btn-primary" aria-label="View my projects">See Projects</a>
-                            <a href="https://github.com/Byiringiro-Gad" target="_blank" class="btn btn-secondary" aria-label="Visit my GitHub profile">GitHub</a>
-                        </div>
+                    <div class="badge animate-pop">Available for Innovation</div>
+                    <h1 class="glitch-text">Architecting <span class="text-gradient">Data Logic.</span></h1>
+                    <p class="hero-bio">
+                        I am a Software Engineering explorer at **The Gym Rwanda**, specializing in the silent engine of technology: **Backend Systems**. I don't just write code; I build the scalable foundations that solve real-world friction.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-glow">Explore Artifacts</a>
+                        <a href="#cv" class="btn btn-outline">Review Dossier</a>
                     </div>
-                    <div class="hero-image-wrapper">
-                        <div class="hero-image floating">
-                            <img src="gad.jpg" alt="Byiringiro Gad profile picture" class="profile-pic">
-                        </div>
-                        <div class="personal-info-sidebar glass">
-                            <div class="info-item">
-                                <span class="info-label">Email</span>
-                                <a href="mailto:gadb5743@gmail.com" class="info-value" aria-label="Email me at gadb5743@gmail.com">gadb5743@gmail.com</a>
-                            </div>
-                            <div class="info-item">
-                                <span class="info-label">Phone</span>
-                                <a href="tel:+27803472305" class="info-value" aria-label="Call me at +27 803 472 305">+27 803 472 305</a>
-                            </div>
-                            <div class="info-item">
-                                <span class="info-label">Location</span>
-                                <span class="info-value">Kigali, Rwanda</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="info-label">Quick Connect</span>
-                                <div class="info-socials">
-                                    <a href="https://wa.me/27803472305" target="_blank" aria-label="Message me on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-                                    <a href="tel:+27803472305" aria-label="Call me directly"><i class="fas fa-phone-alt" aria-hidden="true"></i></a>
-                                    <a href="https://github.com/Byiringiro-Gad" target="_blank" aria-label="Visit my GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
-                                    <a href="https://www.linkedin.com/in/byiringiro-gad-6533612a7" target="_blank" aria-label="Visit my LinkedIn profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                                    <a href="https://leetcode.com/u/byiringiro-gad/" target="_blank" aria-label="Visit my LeetCode profile"><i class="fas fa-terminal" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section" aria-labelledby="projects-title">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-label">Selected Works</span>
-                    <h2 id="projects-title" class="section-title">Built with Purpose</h2>
                 </div>
                 
-                <div class="projects-grid">
-                    <article>
-                        <a href="https://github.com/Byiringiro-Gad/LeetCode-Connect" target="_blank" class="project-card glass" aria-label="View LeetCode Connect project">
-                            <div class="project-img-wrapper" aria-hidden="true">
-                                <i class="fas fa-link"></i>
-                            </div>
-                            <div class="project-info">
-                                <h3>LeetCode Connect</h3>
-                                <p>An integration tool for tracking and syncing algorithmic problem-solving progress.</p>
-                                <div class="project-tags">
-                                    <span>Python</span>
-                                    <span>API Integration</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article>
-                        <a href="https://github.com/Byiringiro-Gad/SQL-JOINS-AND-WINDOW-FUNCTIONS" target="_blank" class="project-card glass" aria-label="View SQL & Window Functions project">
-                            <div class="project-img-wrapper" aria-hidden="true">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div class="project-info">
-                                <h3>SQL & Window Functions</h3>
-                                <p>Advanced data manipulation using PL/SQL, complex joins, and analytical functions.</p>
-                                <div class="project-tags">
-                                    <span>PL/SQL</span>
-                                    <span>Oracle Database</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article>
-                        <a href="https://github.com/Byiringiro-Gad/oracle_pdb_ass_II" target="_blank" class="project-card glass" aria-label="View DBMS & Oracle PDB project">
-                            <div class="project-img-wrapper" aria-hidden="true">
-                                <i class="fas fa-server"></i>
-                            </div>
-                            <div class="project-info">
-                                <h3>DBMS & Oracle PDB</h3>
-                                <p>Implementation of Pluggable Databases and backend logic for enterprise-level data management.</p>
-                                <div class="project-tags">
-                                    <span>Oracle PDB</span>
-                                    <span>Database Architecture</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article>
-                        <a href="https://github.com/Byiringiro-Gad/TheGymRwanda-Web-Dev" target="_blank" class="project-card glass" aria-label="View Web Dev project">
-                            <div class="project-img-wrapper" aria-hidden="true">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <div class="project-info">
-                                <h3>The Gym Rwanda - Web Dev</h3>
-                                <p>Foundational web development projects focusing on clean, semantic HTML and CSS.</p>
-                                <div class="project-tags">
-                                    <span>HTML5</span>
-                                    <span>CSS3</span>
-                                    <span>Frontend</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
+                <div class="hero-visual">
+                    <div class="image-orb">
+                        <img src="gad.jpg" alt="Byiringiro Gad" class="profile-img">
+                    </div>
+                    <!-- Innovation 2: Floating Info Nodes -->
+                    <div class="info-node node-1 glass">
+                        <i class="fas fa-database"></i>
+                        <span>SQL Expert</span>
+                    </div>
+                    <div class="info-node node-2 glass">
+                        <i class="fab fa-python"></i>
+                        <span>Python Dev</span>
+                    </div>
+                    <div class="contact-card glass">
+                        <div class="contact-header">Connect Direct</div>
+                        <a href="mailto:gadb5743@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+27803472305"><i class="fas fa-phone"></i></a>
+                        <a href="https://wa.me/27803472305" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com/Byiringiro-Gad" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="section" aria-labelledby="skills-title">
+        <section id="projects" class="section">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-label">Stack</span>
-                    <h2 id="skills-title" class="section-title">Technical Expertise</h2>
+                <div class="section-heading">
+                    <span class="sub-title">Repositories</span>
+                    <h2 class="title">Engineering Artifacts</h2>
                 </div>
+                
+                <!-- Innovation 3: Dynamic Project Grid -->
+                <div class="project-grid" id="project-anchor">
+                    <!-- Project cards are enhanced with unique colors -->
+                    <article class="project-card glass" data-color="emerald">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="project-icon"><i class="fas fa-terminal"></i></div>
+                            <h3>LeetCode Connect</h3>
+                            <p>An automated pipeline bridging Python logic with algorithmic tracking.</p>
+                            <div class="tags"><span>Python</span><span>Automation</span></div>
+                            <a href="https://github.com/Byiringiro-Gad/LeetCode-Connect" class="arrow-link"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
 
-                <div class="skills-grid">
-                    <div class="skill-cat glass">
-                        <h3>Languages</h3>
-                        <ul class="skill-list">
-                            <li>Python</li>
-                            <li>SQL (PL/SQL)</li>
-                            <li>HTML / CSS</li>
-                        </ul>
+                    <article class="project-card glass" data-color="sapphire">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="project-icon"><i class="fas fa-database"></i></div>
+                            <h3>SQL Matrix</h3>
+                            <p>Advanced PL/SQL implementations utilizing Window Functions for deep data analysis.</p>
+                            <div class="tags"><span>Oracle</span><span>PL/SQL</span></div>
+                            <a href="https://github.com/Byiringiro-Gad/SQL-JOINS-AND-WINDOW-FUNCTIONS" class="arrow-link"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card glass" data-color="amber">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="project-icon"><i class="fas fa-server"></i></div>
+                            <h3>Oracle PDB</h3>
+                            <p>Architecting Pluggable Databases for high-availability enterprise environments.</p>
+                            <div class="tags"><span>DBA</span><span>Architecture</span></div>
+                            <a href="https://github.com/Byiringiro-Gad/oracle_pdb_ass_II" class="arrow-link"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="sub-title">Intelligence</span>
+                    <h2 class="title">Technical DNA</h2>
+                </div>
+                <div class="skills-wrapper glass">
+                    <div class="skill-group">
+                        <label>Languages</label>
+                        <div class="skill-tags">
+                            <span class="tag-vibrant">Python</span>
+                            <span class="tag-vibrant">PL/SQL</span>
+                            <span class="tag-vibrant">JavaScript</span>
+                        </div>
                     </div>
-                    <div class="skill-cat glass">
-                        <h3>Data & Backend</h3>
-                        <ul class="skill-list">
-                            <li>Oracle Database</li>
-                            <li>DBMS Architecture</li>
-                            <li>Oracle PDB</li>
-                            <li>Data Modeling</li>
-                        </ul>
-                    </div>
-                    <div class="skill-cat glass">
-                        <h3>Tools</h3>
-                        <ul class="skill-list">
-                            <li>Git / GitHub</li>
-                            <li>LeetCode Integration</li>
-                            <li>Command Line</li>
-                        </ul>
+                    <div class="skill-group">
+                        <label>Infrastructure</label>
+                        <div class="skill-tags">
+                            <span class="tag-vibrant">Oracle DBMS</span>
+                            <span class="tag-vibrant">Git Systems</span>
+                            <span class="tag-vibrant">Data Modeling</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="cv" class="section" aria-labelledby="cv-title">
-            <div class="container text-center">
-                <div class="cv-card glass">
-                    <span class="section-label">Resume</span>
-                    <h2 id="cv-title" class="section-title">Ready to Collaborate?</h2>
-                    <p class="hero-description" style="margin: 0 auto 3rem; color: #fff;">Download my full resume to see my detailed technical background, academic achievements, and project experience.</p>
-                    <a href="BYIRINGIRO_Gad_CV.pdf" download aria-label="Download Byiringiro Gad's CV as PDF" class="btn btn-primary pulse">
-                        <i class="fas fa-file-pdf" aria-hidden="true" style="margin-right: 10px;"></i> Download CV (PDF)
-                    </a>
+        <section id="cv" class="section">
+            <div class="container">
+                <div class="dossier-card glass">
+                    <div class="dossier-content">
+                        <h2>Obtain Full Dossier</h2>
+                        <p>A comprehensive 10-page technical breakdown of my academic and project history.</p>
+                        <a href="BYIRINGIRO_Gad_CV.pdf" download class="btn btn-glow"><i class="fas fa-file-pdf"></i> Download PDF</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Byiringiro Gad. Crafted for Performance.</p>
-        </div>
+    <footer class="container">
+        <p>&copy; 2024 BYIRINGIRO GAD | Built with High-Performance Logic</p>
     </footer>
 
-    <!-- Scripts -->
+    <!-- GSAP for Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="effects.js"></script>

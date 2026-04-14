@@ -1,167 +1,135 @@
-// ADVANCED INTERACTIVE EFFECTS - ARCHITECT PRO
+// THE ARCHITECT V2 - INTERACTIVE ENGINE
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. MAGIC FLUID BACKGROUND CANVAS
-    const canvas = document.getElementById('bg-canvas');
+    // 1. NEURAL NETWORK BACKGROUND (Innovation)
+    const canvas = document.getElementById('neural-canvas');
     const ctx = canvas.getContext('2d');
     let particles = [];
-    let mouse = { x: null, y: null };
+    const connectionDistance = 150;
 
     function initCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     }
 
-    window.addEventListener('mousemove', (e) => {
-        mouse.x = e.x;
-        mouse.y = e.y;
-    });
-
     class Particle {
         constructor() {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 2 + 0.5;
-            this.baseX = this.x;
-            this.baseY = this.y;
-            this.density = (Math.random() * 30) + 1;
-            this.opacity = Math.random() * 0.5 + 0.1;
+            this.vx = (Math.random() - 0.5) * 0.5;
+            this.vy = (Math.random() - 0.5) * 0.5;
+            this.radius = 1.5;
         }
         update() {
-            let dx = mouse.x - this.x;
-            let dy = mouse.y - this.y;
-            let distance = Math.sqrt(dx * dx + dy * dy);
-            let forceDirectionX = dx / distance;
-            let forceDirectionY = dy / distance;
-            let maxDistance = 150;
-            let force = (maxDistance - distance) / maxDistance;
-            let directionX = forceDirectionX * force * this.density;
-            let directionY = forceDirectionY * force * this.density;
-
-            if (distance < maxDistance) {
-                this.x -= directionX;
-                this.y -= directionY;
-            } else {
-                if (this.x !== this.baseX) {
-                    let dx = this.x - this.baseX;
-                    this.x -= dx / 10;
-                }
-                if (this.y !== this.baseY) {
-                    let dy = this.y - this.baseY;
-                    this.y -= dy / 10;
-                }
-            }
+            this.x += this.vx;
+            this.y += this.vy;
+            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
         }
         draw() {
-            ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(16, 185, 129, 0.5)';
             ctx.fill();
         }
     }
 
-    function createParticles() {
+    function createNetwork() {
         particles = [];
-        let numberOfParticles = (canvas.width * canvas.height) / 8000;
-        for (let i = 0; i < numberOfParticles; i++) {
-            particles.push(new Particle());
-        }
+        const count = (canvas.width * canvas.height) / 15000;
+        for (let i = 0; i < count; i++) particles.push(new Particle());
     }
 
-    function animate() {
+    function animateNetwork() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach(p => {
-            p.update();
-            p.draw();
-        });
-        requestAnimationFrame(animate);
+        for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < connectionDistance) {
+                    ctx.beginPath();
+                    ctx.strokeStyle = `rgba(16, 185, 129, ${1 - dist / connectionDistance})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                }
+            }
+        }
+        requestAnimationFrame(animateNetwork);
     }
 
     initCanvas();
-    createParticles();
-    animate();
-    window.addEventListener('resize', () => {
-        initCanvas();
-        createParticles();
-    });
+    createNetwork();
+    animateNetwork();
+    window.addEventListener('resize', () => { initCanvas(); createNetwork(); });
 
-    // 2. REFINED CUSTOM CURSOR SYSTEM
-    const cursor = document.createElement('div');
-    const follower = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    follower.className = 'cursor-follower';
-    document.body.appendChild(cursor);
-    document.body.appendChild(follower);
+    // 2. MAGNETIC CURSOR SYSTEM
+    const cursor = document.getElementById('cursor');
+    const glow = document.getElementById('cursor-glow');
 
     document.addEventListener('mousemove', (e) => {
         gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0 });
-        gsap.to(follower, { x: e.clientX, y: e.clientY, duration: 0.15 });
+        gsap.to(glow, { x: e.clientX, y: e.clientY, duration: 0.2 });
     });
 
-    const hoverTargets = document.querySelectorAll('a, button, .project-card, .skill-cat, .glass');
-    hoverTargets.forEach(target => {
-        target.addEventListener('mouseenter', () => {
-            gsap.to(follower, { scale: 2, backgroundColor: 'rgba(255, 255, 255, 0.1)', borderColor: 'rgba(255, 255, 255, 0.8)', duration: 0.3 });
+    const hoverables = document.querySelectorAll('a, button, .project-card, .tag-vibrant');
+    hoverables.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            gsap.to(glow, { scale: 2, backgroundColor: 'rgba(16, 185, 129, 0.1)', duration: 0.3 });
         });
-        target.addEventListener('mouseleave', () => {
-            gsap.to(follower, { scale: 1, backgroundColor: 'transparent', borderColor: 'rgba(255, 255, 255, 0.6)', duration: 0.3 });
+        el.addEventListener('mouseleave', () => {
+            gsap.to(glow, { scale: 1, backgroundColor: 'transparent', duration: 0.3 });
         });
     });
 
     // 3. GSAP SCROLL REVEALS
     gsap.registerPlugin(ScrollTrigger);
 
-    // Section Titles Reveal
-    gsap.utils.toArray('.section-header').forEach(header => {
-        gsap.from(header, {
-            scrollTrigger: {
-                trigger: header,
-                start: 'top 85%',
-            },
-            y: 50,
-            opacity: 0,
-            duration: 1,
-            ease: 'power3.out'
-        });
+    gsap.from('.hero-content > *', {
+        y: 50,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 1,
+        ease: 'power4.out'
     });
 
-    // Project Cards Reveal - Faster staggering
+    gsap.from('.hero-visual', {
+        scale: 0.8,
+        opacity: 0,
+        duration: 1.5,
+        ease: 'expo.out'
+    });
+
     gsap.from('.project-card', {
         scrollTrigger: {
-            trigger: '.projects-grid',
-            start: 'top 80%'
+            trigger: '#projects',
+            start: 'top 70%'
         },
-        y: 60,
+        y: 100,
         opacity: 0,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: 'power2.out'
+        stagger: 0.2,
+        duration: 1,
+        ease: 'power3.out'
     });
 
-    // Skill Category Reveal
-    gsap.from('.skill-cat', {
-        scrollTrigger: {
-            trigger: '.skills-grid',
-            start: 'top 85%'
-        },
-        y: 40,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: 'power2.out'
-    });
-
-    // Smooth reveal for all glass elements
-    gsap.utils.toArray('.glass').forEach(el => {
-        gsap.from(el, {
-            scrollTrigger: {
-                trigger: el,
-                start: 'top 90%',
-            },
-            opacity: 0,
-            y: 20,
-            duration: 1,
-            ease: 'power2.out'
+    // Innovation: Dynamic 3D tilt for cards
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            gsap.to(card, {
+                rotateY: x * 0.05,
+                rotateX: -y * 0.05,
+                duration: 0.5
+            });
+        });
+        card.addEventListener('mouseleave', () => {
+            gsap.to(card, { rotateY: 0, rotateX: 0, duration: 0.5 });
         });
     });
 });
