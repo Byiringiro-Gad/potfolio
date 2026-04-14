@@ -3,164 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Byiringiro Gad | Backend Architect & Systems Student</title>
+    <title>BYIRINGIRO Gad - Homepage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="dark-theme">
-    <!-- Innovation 1: Neural Network Canvas Background -->
-    <canvas id="neural-canvas" aria-hidden="true"></canvas>
+<body class="dark-mode">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fas fa-terminal"></i> BYIRINGIRO Gad
+            </a>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="#works">Works</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#bio">Bio</a>
+                    <a href="#downloads">Docs</a>
+                </div>
+                <div class="nav-controls">
+                    <button id="language-toggle" class="control-btn" title="Change Language">
+                        <i class="fas fa-globe"></i>
+                    </button>
+                    <button id="theme-toggle" class="control-btn" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <div class="custom-cursor" id="cursor"></div>
-    <div class="cursor-glow" id="cursor-glow"></div>
-
-    <header id="header">
-        <nav class="container">
-            <a href="#home" class="nav-logo">GAD<span>.</span></a>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Entry</a></li>
-                <li><a href="#projects" class="nav-link">Artifacts</a></li>
-                <li><a href="#skills" class="nav-link">Intelligence</a></li>
-                <li><a href="#cv" class="nav-link">Dossier</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero-section">
-            <div class="container grid-2">
-                <div class="hero-content">
-                    <div class="badge animate-pop">Available for Innovation</div>
-                    <h1 class="glitch-text">Architecting <span class="text-gradient">Data Logic.</span></h1>
-                    <p class="hero-bio">
-                        I am a Software Engineering explorer at **The Gym Rwanda**, specializing in the silent engine of technology: **Backend Systems**. I don't just write code; I build the scalable foundations that solve real-world friction.
-                    </p>
-                    <div class="hero-cta">
-                        <a href="#projects" class="btn btn-glow">Explore Artifacts</a>
-                        <a href="#cv" class="btn btn-outline">Review Dossier</a>
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-card glass">
+                <p>Hello, I'm an A2SV G7 student based in Rwanda!</p>
+            </div>
+            
+            <div class="hero-header">
+                <div class="hero-text">
+                    <h1 class="animated-name">BYIRINGIRO <span class="gradient-text">Gad</span></h1>
+                    <div class="role-container">
+                        <span id="role-text" class="role-text">Software Engineer</span>
+                        <span class="cursor">|</span>
                     </div>
                 </div>
-                
-                <div class="hero-visual">
-                    <div class="image-orb">
-                        <img src="gad.jpg" alt="Byiringiro Gad" class="profile-img">
+                <div class="hero-avatar-container">
+                    <div class="hero-avatar">
+                        <img src="gad.jpg" alt="BYIRINGIRO Gad">
                     </div>
-                    <!-- Innovation 2: Floating Info Nodes -->
-                    <div class="info-node node-1 glass">
-                        <i class="fas fa-database"></i>
-                        <span>SQL Expert</span>
-                    </div>
-                    <div class="info-node node-2 glass">
-                        <i class="fab fa-python"></i>
-                        <span>Python Dev</span>
-                    </div>
-                    <div class="contact-card glass">
-                        <div class="contact-header">Connect Direct</div>
-                        <a href="mailto:gadb5743@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a href="tel:+27803472305"><i class="fas fa-phone"></i></a>
-                        <a href="https://wa.me/27803472305" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://github.com/Byiringiro-Gad" target="_blank"><i class="fab fa-github"></i></a>
+                    <!-- New Contact Bar -->
+                    <div class="hero-contact-bar glass">
+                        <a href="tel:+250783472305" class="contact-icon" title="Call Me">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="https://wa.me/250783472305" target="_blank" class="contact-icon" title="WhatsApp Me">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:gadb5743@gmail.com" class="contact-icon" title="Email Me">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="section">
-            <div class="container">
-                <div class="section-heading">
-                    <span class="sub-title">Repositories</span>
-                    <h2 class="title">Engineering Artifacts</h2>
-                </div>
-                
-                <!-- Innovation 3: Dynamic Project Grid -->
-                <div class="project-grid" id="project-anchor">
-                    <!-- Project cards are enhanced with unique colors -->
-                    <article class="project-card glass" data-color="emerald">
-                        <div class="card-glow"></div>
-                        <div class="card-content">
-                            <div class="project-icon"><i class="fas fa-terminal"></i></div>
-                            <h3>LeetCode Connect</h3>
-                            <p>An automated pipeline bridging Python logic with algorithmic tracking.</p>
-                            <div class="tags"><span>Python</span><span>Automation</span></div>
-                            <a href="https://github.com/Byiringiro-Gad/LeetCode-Connect" class="arrow-link"><i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="project-card glass" data-color="sapphire">
-                        <div class="card-glow"></div>
-                        <div class="card-content">
-                            <div class="project-icon"><i class="fas fa-database"></i></div>
-                            <h3>SQL Matrix</h3>
-                            <p>Advanced PL/SQL implementations utilizing Window Functions for deep data analysis.</p>
-                            <div class="tags"><span>Oracle</span><span>PL/SQL</span></div>
-                            <a href="https://github.com/Byiringiro-Gad/SQL-JOINS-AND-WINDOW-FUNCTIONS" class="arrow-link"><i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="project-card glass" data-color="amber">
-                        <div class="card-glow"></div>
-                        <div class="card-content">
-                            <div class="project-icon"><i class="fas fa-server"></i></div>
-                            <h3>Oracle PDB</h3>
-                            <p>Architecting Pluggable Databases for high-availability enterprise environments.</p>
-                            <div class="tags"><span>DBA</span><span>Architecture</span></div>
-                            <a href="https://github.com/Byiringiro-Gad/oracle_pdb_ass_II" class="arrow-link"><i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                </div>
-            </div>
+        <!-- Works Section -->
+        <section id="works" class="section">
+            <h3 class="section-title">Work</h3>
+            <p class="section-content">
+                I am a software engineering student who enjoys learning new things and solving real problems through technology. 
+                Currently, I am a member of the **A2SV (Africa to Silicon Valley) Generation 7**, where I undergo intensive training in Data Structures, Algorithms, and System Design to build high-impact digital solutions.
+            </p>
         </section>
 
+        <!-- Skills Section -->
         <section id="skills" class="section">
-            <div class="container">
-                <div class="section-heading">
-                    <span class="sub-title">Intelligence</span>
-                    <h2 class="title">Technical DNA</h2>
-                </div>
-                <div class="skills-wrapper glass">
-                    <div class="skill-group">
-                        <label>Languages</label>
-                        <div class="skill-tags">
-                            <span class="tag-vibrant">Python</span>
-                            <span class="tag-vibrant">PL/SQL</span>
-                            <span class="tag-vibrant">JavaScript</span>
-                        </div>
+            <h3 class="section-title">Skills</h3>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h4><i class="fas fa-code"></i> Technical Stack</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python (DSA)</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> SQL Expert</span>
+                        <span class="skill-tag"><i class="fas fa-brain"></i> Algorithms</span>
+                        <span class="skill-tag"><i class="fas fa-project-diagram"></i> System Design</span>
+                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git/Version Control</span>
+                        <span class="skill-tag"><i class="fas fa-terminal"></i> Command Line</span>
                     </div>
-                    <div class="skill-group">
-                        <label>Infrastructure</label>
-                        <div class="skill-tags">
-                            <span class="tag-vibrant">Oracle DBMS</span>
-                            <span class="tag-vibrant">Git Systems</span>
-                            <span class="tag-vibrant">Data Modeling</span>
-                        </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-bolt"></i> Key Strengths</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Fast & Accurate Typing</span>
+                        <span class="skill-tag">Deep Attention to Detail</span>
+                        <span class="skill-tag">System-Navigation Expert</span>
+                        <span class="skill-tag">Clear Communication</span>
+                        <span class="skill-tag">Cooperative Team Player</span>
+                        <span class="skill-tag">Rapid Technical Learner</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-language"></i> Languages</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">English (Proficient)</span>
+                        <span class="skill-tag">Kinyarwanda (Native)</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="cv" class="section">
-            <div class="container">
-                <div class="dossier-card glass">
-                    <div class="dossier-content">
-                        <h2>Obtain Full Dossier</h2>
-                        <p>A comprehensive 10-page technical breakdown of my academic and project history.</p>
-                        <a href="BYIRINGIRO_Gad_CV.pdf" download class="btn btn-glow"><i class="fas fa-file-pdf"></i> Download PDF</a>
-                    </div>
-                </div>
+        <!-- Bio Section -->
+        <section id="bio" class="section">
+            <h3 class="section-title">Bio</h3>
+            <div class="bio-row">
+                <span class="bio-year">2003</span>
+                <span>Born in Rwanda.</span>
+            </div>
+            <div class="bio-row">
+                <span class="bio-year">2021</span>
+                <span>Completed High School at Ecoles de Science de Musanze (MCB).</span>
+            </div>
+            <div class="bio-row">
+                <span class="bio-year">2024 to present</span>
+                <span>B.Sc. in Software Engineering at Adventist University of Central Africa (AUCA). <br> <strong>GPA: 16.16/20 (Grand Distinction)</strong></span>
+            </div>
+            <div class="bio-row">
+                <span class="bio-year">2025 to present</span>
+                <span>A2SV G7 Student - Africa to Silicon Valley.</span>
             </div>
         </section>
+
+        <!-- Downloads Section -->
+        <section id="downloads" class="section">
+            <h3 class="section-title">Documents</h3>
+            <div class="cta-group">
+                <a href="BYIRINGIRO_Gad_CV.pdf" download class="btn btn-primary">
+                    <i class="fas fa-file-pdf"></i> Download Resume
+                </a>
+                <a href="Transcript_28355 (3).pdf" download class="btn btn-outline">
+                    <i class="fas fa-file-invoice"></i> Download Transcript
+                </a>
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies" class="section">
+            <h3 class="section-title">I ♥</h3>
+            <p class="section-content">
+                Coding, Reading, Football, and solving real-world problems.
+            </p>
+        </section>
+
+        <!-- Social Section -->
+        <section id="social" class="section">
+            <h3 class="section-title">On the web</h3>
+            <ul class="social-list">
+                <li><a href="https://github.com/Byiringiro-Gad" target="_blank"><i class="fab fa-github"></i> @Byiringiro-Gad</a></li>
+                <li><a href="https://www.linkedin.com/in/byiringiro-gad-6533612a7" target="_blank"><i class="fab fa-linkedin"></i> @byiringiro-gad</a></li>
+                <li><a href="https://leetcode.com/u/byiringiro-gad/" target="_blank"><i class="fas fa-code"></i> @byiringiro-gad</a></li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 BYIRINGIRO Gad. All Rights Reserved.</p>
+        </footer>
     </main>
 
-    <footer class="container">
-        <p>&copy; 2024 BYIRINGIRO GAD | Built with High-Performance Logic</p>
-    </footer>
-
-    <!-- GSAP for Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="effects.js"></script>
 </body>
 </html>
