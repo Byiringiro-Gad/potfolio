@@ -3,31 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYIRINGIRO Gad - Homepage</title>
+    <title>BYIRINGIRO Gad | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dark-mode">
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <i class="fas fa-terminal"></i> BYIRINGIRO Gad
-            </a>
+            <a href="#top" class="nav-logo">Gad</a>
+            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-right">
-                <div class="nav-links">
-                    <a href="#works">Works</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#bio">Bio</a>
-                    <a href="#downloads">Docs</a>
+                <div id="nav-links" class="nav-links">
+                    <a href="#works" data-i18n="navWorks">Works</a>
+                    <a href="#projects" data-i18n="navProjects">Projects</a>
+                    <a href="#skills" data-i18n="navSkills">Skills</a>
+                    <a href="#awards" data-i18n="navAwards">Awards</a>
+                    <a href="#bio" data-i18n="navJourney">Journey</a>
+                    <a href="#downloads" data-i18n="navDocs">Docs</a>
                 </div>
                 <div class="nav-controls">
-                    <button id="language-toggle" class="control-btn" title="Choose Language">
-                        <!-- Globe icon removed as requested -->
-                    </button>
-                    <button id="theme-toggle" class="control-btn" title="Toggle Theme">
+                    <label class="select-wrap" aria-label="Jump to section">
+                        <i class="fas fa-location-arrow"></i>
+                        <select id="section-jump" class="nav-select">
+                            <option value="" data-i18n="jumpTo">Jump to section</option>
+                            <option value="works" data-i18n="navWorks">Works</option>
+                            <option value="projects" data-i18n="navProjects">Projects</option>
+                            <option value="skills" data-i18n="navSkills">Skills</option>
+                            <option value="awards" data-i18n="navAwards">Awards</option>
+                            <option value="bio" data-i18n="navJourney">Journey</option>
+                            <option value="downloads" data-i18n="navDocs">Docs</option>
+                            <option value="gallery" data-i18n="galleryTitle">Photo Gallery</option>
+                            <option value="social" data-i18n="socialTitle">On the Web</option>
+                        </select>
+                    </label>
+                    <label class="select-wrap language-wrap" aria-label="Select language">
+                        <i class="fas fa-globe"></i>
+                        <select id="language-select" class="nav-select">
+                            <option value="en">English</option>
+                            <option value="fr">Francais</option>
+                            <option value="rw">Kinyarwanda</option>
+                        </select>
+                    </label>
+                    <button id="theme-toggle" class="control-btn" title="Toggle theme" aria-label="Toggle theme">
                         <i class="fas fa-moon"></i>
                     </button>
                 </div>
@@ -35,34 +59,49 @@
         </div>
     </nav>
 
-    <main class="container">
-        <!-- Hero Section -->
+    <main id="top" class="container">
         <section class="hero">
             <div class="hero-card glass">
-                <p>Hello, This is Gad<br>wellcome to my personel website!</p>
+                <p data-i18n="heroIntro">
+                    Hello, this is Gad. Welcome to my personal website.
+                </p>
             </div>
-            
+
             <div class="hero-header">
                 <div class="hero-text">
+                    <p class="eyebrow" data-i18n="eyebrow">Software Engineering Student</p>
                     <h1 class="animated-name">BYIRINGIRO <span class="gradient-text">Gad</span></h1>
                     <div class="role-container">
                         <span id="role-text" class="role-text">Software Engineer</span>
                         <span class="cursor">|</span>
                     </div>
-                </div>
-                <div class="hero-avatar-container">
-                    <div class="hero-avatar">
-                        <img src="gad.jpg" alt="BYIRINGIRO Gad">
+                    <p class="hero-summary" data-i18n="heroSummary">
+                        I build practical software, sharpen problem-solving through algorithms, and keep growing through A2SV and university training.
+                    </p>
+                    <div class="hero-metrics">
+                        <div class="metric-card glass">
+                            <span class="metric-label" data-i18n="visitLabel">Portfolio visits</span>
+                            <strong id="visit-count">...</strong>
+                        </div>
+                        <div class="metric-card glass">
+                            <span class="metric-label" data-i18n="locationLabel">Base</span>
+                            <strong data-i18n="locationValue">Kigali, Rwanda</strong>
+                        </div>
                     </div>
-                    <!-- New Contact Bar -->
+                </div>
+
+                <div class="hero-avatar-container">
+                    <button id="photo-trigger" class="hero-avatar" aria-label="Open full profile photo">
+                        <img src="gad.jpg" alt="BYIRINGIRO Gad portrait">
+                    </button>
                     <div class="hero-contact-bar glass">
-                        <a href="tel:+250783472305" class="contact-icon" title="Call Me">
+                        <a href="tel:+250783472305" class="contact-icon" title="Call">
                             <i class="fas fa-phone"></i>
                         </a>
-                        <a href="https://wa.me/250783472305" target="_blank" class="contact-icon" title="WhatsApp Me">
+                        <a href="https://wa.me/250783472305" target="_blank" rel="noreferrer" class="contact-icon" title="WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="mailto:gadb5743@gmail.com" class="contact-icon" title="Email Me">
+                        <a href="mailto:gadb5743@gmail.com" class="contact-icon" title="Email">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </div>
@@ -70,100 +109,183 @@
             </div>
         </section>
 
-        <!-- Works Section -->
         <section id="works" class="section">
-            <h3 class="section-title">Work</h3>
-            <p class="section-content">
-                I am a software engineering student who enjoys learning new things and solving real problems through technology. 
-                Currently, I am a member of the **A2SV (Africa to Silicon Valley) Generation 7**, where I undergo intensive training in Data Structures, Algorithms, and System Design to build high-impact digital solutions.
+            <h2 class="section-title" data-i18n="workTitle">Work</h2>
+            <p class="section-content" data-i18n="workBody">
+                I am a software engineering student who enjoys learning new things and solving real problems through technology. I am currently part of A2SV Generation 7, where I train intensively in data structures, algorithms, and system design to build high-impact digital solutions.
             </p>
         </section>
 
-        <!-- Skills Section -->
+        <section id="projects" class="section">
+            <div class="section-heading">
+                <h2 class="section-title" data-i18n="projectsTitle">Projects</h2>
+                <a class="section-link" href="https://github.com/Byiringiro-Gad?tab=repositories" target="_blank" rel="noreferrer" data-i18n="projectsCta">View all on GitHub</a>
+            </div>
+            <p class="section-content" data-i18n="projectsIntro">
+                Featured repositories are loaded from GitHub so this section stays current as I keep building.
+            </p>
+            <div id="projects-grid" class="card-grid">
+                <article class="info-card">
+                    <h3>Loading projects...</h3>
+                    <p data-i18n="projectsLoading">Fetching recent public repositories from GitHub.</p>
+                </article>
+            </div>
+        </section>
+
         <section id="skills" class="section">
-            <h3 class="section-title">Skills</h3>
-            <div class="skills-container">
+            <h2 class="section-title" data-i18n="skillsTitle">Skills</h2>
+            <div class="skills-layout">
                 <div class="skill-category">
-                    <h4><i class="fas fa-code"></i> Core Technical Skills</h4>
+                    <h3><i class="fas fa-code"></i> <span data-i18n="skillCoreTitle">Core Technical Skills</span></h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Data Structures & Algorithms</span>
+                        <span class="skill-tag">Data Structures &amp; Algorithms</span>
                         <span class="skill-tag">System Design</span>
-                        <span class="skill-tag">Python (DSA)</span>
-                        <span class="skill-tag">Database Management (SQL)</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">HTML / CSS / JavaScript</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Git &amp; GitHub</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h4><i class="fas fa-tools"></i> Tools & Methodologies</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git & Version Control</span>
-                        <span class="skill-tag">Command Line Interface</span>
-                        <span class="skill-tag">Technical Writing</span>
-                        <span class="skill-tag">Problem Solving</span>
-                        <span class="skill-tag">Fast Learner</span>
+                    <h3><i class="fas fa-laptop-code"></i> <span data-i18n="skillPlatformTitle">Practice & Platforms</span></h3>
+                    <div class="profile-links">
+                        <a class="profile-card" href="https://leetcode.com/u/byiringiro-gad/" target="_blank" rel="noreferrer">
+                            <strong>LeetCode</strong>
+                            <span data-i18n="leetcodeCopy">Algorithm practice and contest-style problem solving.</span>
+                        </a>
+                        <a class="profile-card" href="https://github.com/Byiringiro-Gad" target="_blank" rel="noreferrer">
+                            <strong>GitHub</strong>
+                            <span data-i18n="githubCopy">Code, repositories, and continuous learning projects.</span>
+                        </a>
+                        <a class="profile-card" href="https://www.linkedin.com/in/byiringiro-gad-6533612a7" target="_blank" rel="noreferrer">
+                            <strong>LinkedIn</strong>
+                            <span data-i18n="linkedinCopy">Professional profile, network, and academic progress.</span>
+                        </a>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h4><i class="fas fa-language"></i> Languages</h4>
+                    <h3><i class="fas fa-language"></i> <span data-i18n="skillLanguageTitle">Languages</span></h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">English (Proficient)</span>
-                        <span class="skill-tag">Kinyarwanda (Native)</span>
+                        <span class="skill-tag" data-i18n="langEnglish">English - Proficient</span>
+                        <span class="skill-tag" data-i18n="langFrench">French - Working proficiency</span>
+                        <span class="skill-tag" data-i18n="langKinyarwanda">Kinyarwanda - Native</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Bio Section -->
+        <section id="awards" class="section">
+            <h2 class="section-title" data-i18n="awardsTitle">Honors &amp; Awards</h2>
+            <div class="card-grid">
+                <article class="info-card">
+                    <h3 data-i18n="awardEfTitle">EF Graduation Certificate</h3>
+                    <p data-i18n="awardEfBody">Certificate documenting English language learning and program completion.</p>
+                    <a class="inline-link" href="ef graduation.pdf" target="_blank" rel="noreferrer" data-i18n="openCertificate">Open certificate</a>
+                </article>
+                <article class="info-card">
+                    <h3 data-i18n="awardCiscoTitle">Cisco Certificate</h3>
+                    <p data-i18n="awardCiscoBody">Networking and technical training certificate from Cisco.</p>
+                    <a class="inline-link" href="cisco.pdf" target="_blank" rel="noreferrer" data-i18n="openCertificate">Open certificate</a>
+                </article>
+                <article class="info-card">
+                    <h3 data-i18n="awardIsocTitle">Internet Society Certificate</h3>
+                    <p data-i18n="awardIsocBody">Recognition from the Internet Society highlighting my engagement with global internet learning, community, and digital development.</p>
+                    <a class="inline-link" href="https://certificates.isoc.org/473fe7e7-1f03-45f0-b095-67f2153e4941#acc.c4DEhkqG" target="_blank" rel="noreferrer" data-i18n="openCertificate">Open certificate</a>
+                </article>
+            </div>
+            <div class="certificate-frame">
+                <iframe
+                    src="https://certificates.isoc.org/473fe7e7-1f03-45f0-b095-67f2153e4941#acc.c4DEhkqG"
+                    title="Internet Society certificate"
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+
         <section id="bio" class="section">
-            <h3 class="section-title">Professional Journey</h3>
+            <h2 class="section-title" data-i18n="journeyTitle">Professional Journey</h2>
             <div class="bio-row">
                 <span class="bio-year">2023 - Present</span>
-                <span>Pursuing B.Sc. in Software Engineering at Adventist University of Central Africa (AUCA), achieving Grand Distinction (GPA: 16.16/20).</span>
+                <span data-i18n="journey1">Pursuing a B.Sc. in Software Engineering at Adventist University of Central Africa (AUCA), with strong academic performance and continued technical growth.</span>
             </div>
             <div class="bio-row">
                 <span class="bio-year">2025 - Present</span>
-                <span>Actively training as an A2SV Generation 7 student, focusing on advanced Data Structures, Algorithms, and System Design for high-impact solutions.</span>
+                <span data-i18n="journey2">Training as an A2SV Generation 7 student with strong focus on data structures, algorithms, and system design for scalable software.</span>
             </div>
-             <div class="bio-row">
+            <div class="bio-row">
                 <span class="bio-year">2021</span>
-                <span>Graduated High School at Ecoles de Science de Musanze (MCB).</span>
+                <span data-i18n="journey3">Graduated from Ecoles de Science de Musanze (MCB).</span>
             </div>
         </section>
 
-        <!-- Downloads Section -->
         <section id="downloads" class="section">
-            <h3 class="section-title">Documents</h3>
+            <h2 class="section-title" data-i18n="docsTitle">Documents</h2>
             <div class="cta-group">
                 <a href="BYIRINGIRO_Gad_CV.pdf" download class="btn btn-primary">
-                    <i class="fas fa-file-pdf"></i> Download Resume
+                    <i class="fas fa-file-pdf"></i> <span data-i18n="downloadResume">Download Resume</span>
                 </a>
-                <a href="Transcript_28355 (3).pdf" download class="btn btn-outline">
-                    <i class="fas fa-file-invoice"></i> Download Transcript
+                <a href="Transcript_28355 (3).pdf" target="_blank" rel="noreferrer" class="btn btn-outline protected-doc">
+                    <i class="fas fa-file-invoice"></i> <span data-i18n="viewTranscript">View Transcript</span>
+                </a>
+                <a href="cisco.pdf" target="_blank" rel="noreferrer" class="btn btn-outline protected-doc">
+                    <i class="fas fa-award"></i> <span data-i18n="viewCisco">View Cisco Certificate</span>
+                </a>
+                <a href="ef graduation.pdf" target="_blank" rel="noreferrer" class="btn btn-outline protected-doc">
+                    <i class="fas fa-graduation-cap"></i> <span data-i18n="viewEf">View EF Certificate</span>
                 </a>
             </div>
         </section>
 
-        <!-- Hobbies Section -->
-        <section id="hobbies" class="section">
-            <h3 class="section-title">I ♥</h3>
-            <p class="section-content">
-                Coding, Reading, Football, and solving real-world problems.
+        <section id="gallery" class="section">
+            <h2 class="section-title" data-i18n="galleryTitle">Photo Gallery</h2>
+            <p class="section-content" data-i18n="galleryBody">
+                Tap or click the picture to view it in full size.
             </p>
+            <div class="gallery-grid">
+                <button class="gallery-photo protected-media" id="gallery-photo-trigger" aria-label="Open profile image" data-photo-src="gad.jpg">
+                    <img src="gad.jpg" alt="BYIRINGIRO Gad full profile picture" draggable="false">
+                </button>
+                <button class="gallery-photo protected-media" aria-label="Open gallery photo 1" data-photo-src="gallery1.jpeg">
+                    <img src="gallery1.jpeg" alt="Gallery photo 1" draggable="false">
+                </button>
+                <button class="gallery-photo protected-media" aria-label="Open gallery photo 2" data-photo-src="gallery2.jpeg">
+                    <img src="gallery2.jpeg" alt="Gallery photo 2" draggable="false">
+                </button>
+                <button class="gallery-photo protected-media" aria-label="Open gallery photo 3" data-photo-src="gallery3.jpeg">
+                    <img src="gallery3.jpeg" alt="Gallery photo 3" draggable="false">
+                </button>
+                <button class="gallery-photo protected-media" aria-label="Open gallery photo 4" data-photo-src="gellery3.jpeg">
+                    <img src="gellery3.jpeg" alt="Gallery photo 4" draggable="false">
+                </button>
+            </div>
         </section>
 
-        <!-- Social Section -->
         <section id="social" class="section">
-            <h3 class="section-title">On the web</h3>
+            <h2 class="section-title" data-i18n="socialTitle">On the Web</h2>
             <ul class="social-list">
-                <li><a href="https://github.com/Byiringiro-Gad" target="_blank"><i class="fab fa-github"></i> @Byiringiro-Gad</a></li>
-                <li><a href="https://www.linkedin.com/in/byiringiro-gad-6533612a7" target="_blank"><i class="fab fa-linkedin"></i> @byiringiro-gad</a></li>
-                <li><a href="https://leetcode.com/u/byiringiro-gad/" target="_blank"><i class="fas fa-code"></i> @byiringiro-gad</a></li>
+                <li><a href="https://github.com/Byiringiro-Gad" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/byiringiro-gad-6533612a7" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://leetcode.com/u/byiringiro-gad/" target="_blank" rel="noreferrer"><i class="fas fa-code"></i> LeetCode</a></li>
+                <li><a href="mailto:gadb5743@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
             </ul>
         </section>
 
+        <section id="hobbies" class="section">
+            <h2 class="section-title" data-i18n="hobbiesTitle">I Love</h2>
+            <p class="section-content" data-i18n="hobbiesBody">
+                Coding, reading, football, and solving real-world problems.
+            </p>
+        </section>
+
         <footer>
-            <p>&copy; 2026 BYIRINGIRO Gad. All Rights Reserved.</p>
+            <p data-i18n="footerCopy">&copy; 2026 BYIRINGIRO Gad. All rights reserved.</p>
         </footer>
     </main>
+
+    <div id="photo-modal" class="photo-modal" aria-hidden="true">
+        <button id="photo-close" class="photo-close" aria-label="Close photo viewer">&times;</button>
+        <img id="photo-modal-image" class="protected-media" src="gad.jpg" alt="BYIRINGIRO Gad full portrait" draggable="false">
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="effects.js"></script>
