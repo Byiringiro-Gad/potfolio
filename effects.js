@@ -22,8 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
             navWorks: "Works",
             navProjects: "Projects",
             navSkills: "Skills",
+            navCoding: "Coding",
             navAwards: "Awards",
             navJourney: "Journey",
+            navContact: "Contact",
             navDocs: "Docs",
             jumpTo: "Jump to section",
             heroIntro: "Hello, this is Gad. Welcome to my personal website.",
@@ -49,9 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
             leetcodeCopy: "Algorithm practice and contest-style problem solving.",
             githubCopy: "Code, repositories, and continuous learning projects.",
             linkedinCopy: "Professional profile, network, and academic progress.",
+            codeforcesCopy: "Competitive programming and algorithmic challenges.",
+            hackerrankCopy: "Skill assessment and problem-solving practice.",
             langEnglish: "English - Proficient",
             langFrench: "French - Working proficiency",
             langKinyarwanda: "Kinyarwanda - Native",
+            codingTitle: "Coding Platforms",
             awardsTitle: "Honors & Awards",
             awardEfTitle: "EF Graduation Certificate",
             awardEfBody: "Certificate documenting English language learning and program completion.",
@@ -64,6 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
             journey1: "Pursuing a B.Sc. in Software Engineering at Adventist University of Central Africa (AUCA), with strong academic performance and continued technical growth.",
             journey2: "Training as an A2SV Generation 7 student with strong focus on data structures, algorithms, and system design for scalable software.",
             journey3: "Graduated from Ecoles de Science de Musanze (MCB).",
+            contactTitle: "Get in Touch",
+            formName: "Name",
+            formEmail: "Email",
+            formMessage: "Message",
+            formSubmit: "Send Message",
+            formSuccess: "Message sent! I'll get back to you soon.",
+            formError: "Oops! There was a problem sending your message.",
             docsTitle: "Documents",
             downloadResume: "Download Resume",
             viewTranscript: "View Transcript",
@@ -74,14 +86,22 @@ document.addEventListener("DOMContentLoaded", () => {
             socialTitle: "On the Web",
             hobbiesTitle: "I Love",
             hobbiesBody: "Coding, reading, football, and solving real-world problems.",
+            loading: "Loading stats",
+            verifiedProfile: "Verified Profile",
+            solvedLabel: "Solved",
+            rankingLabel: "Rank",
+            ratingLabel: "Rating",
+            viewProfile: "View Profile",
             footerCopy: "© 2026 BYIRINGIRO Gad. All rights reserved."
         },
         fr: {
             navWorks: "Travaux",
             navProjects: "Projets",
             navSkills: "Competences",
+            navCoding: "Programmation",
             navAwards: "Distinctions",
             navJourney: "Parcours",
+            navContact: "Contact",
             navDocs: "Documents",
             jumpTo: "Aller a une section",
             heroIntro: "Bonjour, je suis Gad. Bienvenue sur mon site personnel.",
@@ -107,9 +127,12 @@ document.addEventListener("DOMContentLoaded", () => {
             leetcodeCopy: "Pratique des algorithmes et resolution de problemes de style concours.",
             githubCopy: "Code, depots, et projets d'apprentissage en continu.",
             linkedinCopy: "Profil professionnel, reseau et progression academique.",
+            codeforcesCopy: "Programmation competitive et defis algorithmiques.",
+            hackerrankCopy: "Evaluation des competences et pratique de la resolution de problemes.",
             langEnglish: "Anglais - Bon niveau",
             langFrench: "Francais - Niveau professionnel",
             langKinyarwanda: "Kinyarwanda - Langue maternelle",
+            codingTitle: "Plateformes de programmation",
             awardsTitle: "Distinctions et prix",
             awardEfTitle: "Certificat de fin d'etudes EF",
             awardEfBody: "Certificat attestant l'apprentissage de l'anglais et la fin du programme.",
@@ -122,6 +145,13 @@ document.addEventListener("DOMContentLoaded", () => {
             journey1: "Preparation d'une licence en genie logiciel a l'Universite Adventiste d'Afrique Centrale (AUCA), avec de bons resultats academiques et une croissance technique continue.",
             journey2: "Formation en tant qu'etudiant A2SV Generation 7 avec un fort accent sur les structures de donnees, les algorithmes et la conception de systemes pour des logiciels evolutifs.",
             journey3: "Diplome des Ecoles de Science de Musanze (MCB).",
+            contactTitle: "Me contacter",
+            formName: "Nom",
+            formEmail: "Email",
+            formMessage: "Message",
+            formSubmit: "Envoyer le message",
+            formSuccess: "Message envoye ! Je vous repondrai bientot.",
+            formError: "Oups ! Un probleme est survenu lors de l'envoi.",
             docsTitle: "Documents",
             downloadResume: "Telecharger le CV",
             viewTranscript: "Voir le releve",
@@ -132,14 +162,22 @@ document.addEventListener("DOMContentLoaded", () => {
             socialTitle: "Sur le web",
             hobbiesTitle: "J'aime",
             hobbiesBody: "Coder, lire, le football et resoudre des problemes reels.",
+            loading: "Chargement",
+            verifiedProfile: "Profil verifie",
+            solvedLabel: "Resolus",
+            rankingLabel: "Rang",
+            ratingLabel: "Score",
+            viewProfile: "Voir le profil",
             footerCopy: "© 2026 BYIRINGIRO Gad. Tous droits reserves."
         },
         rw: {
             navWorks: "Ibikorwa",
             navProjects: "Imishinga",
             navSkills: "Ubumenyi",
+            navCoding: "Coding",
             navAwards: "Ibihembo",
             navJourney: "Urugendo",
+            navContact: "Twandikire",
             navDocs: "Inyandiko",
             jumpTo: "Jya ku gice ushaka",
             heroIntro: "Muraho, ndi Gad. Murakaza neza ku rubuga rwanjye bwite.",
@@ -165,9 +203,12 @@ document.addEventListener("DOMContentLoaded", () => {
             leetcodeCopy: "Imyitozo ya algorithms n'ibibazo byo mu marushanwa.",
             githubCopy: "Code, repositories, n'imishinga yo gukomeza kwiga.",
             linkedinCopy: "Umwirondoro w'akazi, network, n'iterambere mu masomo.",
+            codeforcesCopy: "Kurushanwa muri programming na algorithms.",
+            hackerrankCopy: "Isuzuma ry'ubumenyi n'imyitozo yo gukemura ibibazo.",
             langEnglish: "Icyongereza - Nzi neza",
             langFrench: "Igifaransa - Nzi kugikoresha mu kazi",
             langKinyarwanda: "Ikinyarwanda - Ururimi kavukire",
+            codingTitle: "Imbuga nkorera imyitozo",
             awardsTitle: "Ibihembo n'icyubahiro",
             awardEfTitle: "Impamyabumenyi ya EF",
             awardEfBody: "Impamyabumenyi yerekana ko narangije gahunda yo kwiga icyongereza.",
@@ -177,9 +218,16 @@ document.addEventListener("DOMContentLoaded", () => {
             awardIsocBody: "Icyemezo cya Internet Society kigaragaza uruhare rwanjye mu myigire y'ikoranabuhanga, umuganda wa Internet, n'iterambere rya digitali.",
             openCertificate: "Fungura impamyabumenyi",
             journeyTitle: "Urugendo rw'umwuga",
-            journey1: "Ndimo kwiga Bachelor mu bya Software Engineering muri Adventist University of Central Africa (AUCA), nkomeza gutsinda neza no kwagura ubumenyi bwa tekiniki.",
+            journey1: "Ndimo kwiga Bachelor mu bya Software Engineering muri Kaminuza y'Abadiventiste yo muri Africa yo hagati (AUCA), nkomeza gutsinda neza no kwagura ubumenyi bwa tekiniki.",
             journey2: "Ndimo guhugurwa muri A2SV Generation 7 nshyize imbaraga cyane muri data structures, algorithms, na system design kugira ngo nkore software ishobora kwaguka neza.",
             journey3: "Narangije amashuri yisumbuye muri Ecoles de Science de Musanze (MCB).",
+            contactTitle: "Twandikire",
+            formName: "Izina",
+            formEmail: "Email",
+            formMessage: "Ubutumwa",
+            formSubmit: "Ohereza ubutumwa",
+            formSuccess: "Ubutumwa bwoherejwe! Ndagusubiza vuba.",
+            formError: "Habaye ikibazo mu kohereza ubutumwa bwawe.",
             docsTitle: "Inyandiko",
             downloadResume: "Kuramo CV",
             viewTranscript: "Reba transcript",
@@ -190,8 +238,14 @@ document.addEventListener("DOMContentLoaded", () => {
             socialTitle: "Ku mbuga",
             hobbiesTitle: "Nkunda",
             hobbiesBody: "Coding, gusoma, umupira w'amaguru, no gukemura ibibazo byo mu buzima busanzwe.",
+            loading: "Turi kubitegura",
+            verifiedProfile: "Umwirondoro wemejwe",
+            solvedLabel: "Yatsinze",
+            rankingLabel: "Umwanya",
+            ratingLabel: "Amanota",
+            viewProfile: "Reba profile",
             footerCopy: "© 2026 BYIRINGIRO Gad. Uburenganzira bwose burabitswe."
-        }
+            },
     };
 
     const typingRoles = {
@@ -454,9 +508,107 @@ document.addEventListener("DOMContentLoaded", () => {
             .replace(/\b\w/g, (char) => char.toUpperCase());
     }
 
+    async function loadCodingStats() {
+        const leetContainer = document.getElementById("leetcode-stats");
+        const codeforcesContainer = document.getElementById("codeforces-stats");
+        if (!leetContainer || !codeforcesContainer) return;
+
+        try {
+            const response = await fetch("https://leetcode-stats-api.herokuapp.com/byiringiro-gad");
+            const data = await response.json();
+            if (data.status === "success" || data.totalSolved) {
+                const solvedLabel = translations[currentLanguage].solvedLabel || "Solved";
+                const rankingLabel = translations[currentLanguage].rankingLabel || "Rank";
+                leetContainer.innerHTML = `
+                    <div class="stat-item"><span class="stat-label">${solvedLabel}:</span> <span class="stat-badge">${data.totalSolved}</span></div>
+                    <div class="stat-item"><span class="stat-label">${rankingLabel}:</span> <span class="stat-badge">#${data.ranking.toLocaleString()}</span></div>
+                `;
+            } else {
+                leetContainer.innerHTML = `<span class="stat-badge">Active Solver</span>`;
+            }
+        } catch (e) {
+            leetContainer.innerHTML = `<span class="stat-badge">Profile Online</span>`;
+        }
+
+        try {
+            const response = await fetch("https://codeforces.com/api/user.info?handles=gadcoder");
+            const data = await response.json();
+            if (data.status === "OK") {
+                const user = data.result[0];
+                const ratingLabel = translations[currentLanguage].ratingLabel || "Rating";
+                const rankColor = getCodeforcesColor(user.rating);
+                // Visual Graph for Codeforces
+                codeforcesContainer.innerHTML = `
+                    <div style="margin-bottom: 0.5rem;">
+                        <span class="stat-badge" style="background: ${rankColor}">${user.rank || "Unrated"}</span>
+                        <span class="stat-badge" style="background: ${rankColor}">${ratingLabel}: ${user.rating || "N/A"}</span>
+                    </div>
+                    <img src="https://cf-graph-gen.vercel.app/graph?handle=gadcoder&theme=dark" alt="Codeforces Rating Graph" style="width: 100%; border-radius: 8px;" onerror="this.src='https://codeforces.org/s/0/images/codeforces-logo-with-telegram.png'">
+                `;
+            } else {
+                codeforcesContainer.innerHTML = `<span class="stat-badge">Competitive Programmer</span>`;
+            }
+        } catch (e) {
+            codeforcesContainer.innerHTML = `<span class="stat-badge">Profile Online</span>`;
+        }
+    }
+
+    function getCodeforcesColor(rating) {
+        if (!rating) return "var(--accent)";
+        if (rating < 1200) return "#808080"; // Newbie
+        if (rating < 1400) return "#008000"; // Pupil
+        if (rating < 1600) return "#03a89e"; // Specialist
+        if (rating < 1900) return "#0000ff"; // Expert
+        if (rating < 2100) return "#aa00aa"; // Candidate Master
+        return "#ff8c00"; // Master+
+    }
+
+    async function handleFormSubmission() {
+        const form = document.getElementById("portfolio-form");
+        const status = document.getElementById("contact-status");
+        if (!form) return;
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const data = new FormData(event.target);
+            const submitBtn = document.getElementById("submit-btn");
+            submitBtn.disabled = true;
+
+            try {
+                const response = await fetch(event.target.action, {
+                    method: "POST",
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    status.textContent = translations[currentLanguage].formSuccess;
+                    status.style.display = "block";
+                    status.style.background = "rgba(46, 204, 113, 0.2)";
+                    status.style.borderColor = "#2ecc71";
+                    form.reset();
+                } else {
+                    throw new Error();
+                }
+            } catch (error) {
+                status.textContent = translations[currentLanguage].formError;
+                status.style.display = "block";
+                status.style.background = "rgba(231, 76, 60, 0.2)";
+                status.style.borderColor = "#e74c3c";
+            } finally {
+                submitBtn.disabled = false;
+                setTimeout(() => {
+                    status.style.display = "none";
+                }, 5000);
+            }
+        });
+    }
+
     applyLanguage(currentLanguage);
     updateVisitCounter();
     loadProjects();
+    loadCodingStats();
+    handleFormSubmission();
 
     if (window.gsap) {
         gsap.from(".section, .hero-card, .hero-header", {
