@@ -58,7 +58,7 @@ button {
 .container {
     max-width: 1040px;
     margin: 0 auto;
-    padding: 112px 1.5rem 3rem;
+    padding: 118px 1.6rem 3.4rem;
 }
 
 .glass,
@@ -99,7 +99,7 @@ button {
     text-decoration: none;
     color: var(--text);
     font-weight: 800;
-    font-size: 1.15rem;
+    font-size: 1.22rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
@@ -119,7 +119,7 @@ button {
 .nav-links a {
     text-decoration: none;
     color: var(--text);
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 600;
     opacity: 0.85;
     transition: opacity var(--transition), color var(--transition);
@@ -228,8 +228,8 @@ button {
 
 .hero-card {
     border-radius: 18px;
-    padding: 1rem 1.15rem;
-    margin-bottom: 1.5rem;
+    padding: 1.1rem 1.25rem;
+    margin-bottom: 1.7rem;
 }
 
 .hero-card p,
@@ -257,7 +257,7 @@ button {
 }
 
 .animated-name {
-    font-size: clamp(2.4rem, 4vw, 4rem);
+    font-size: clamp(2.6rem, 4.4vw, 4.3rem);
     font-weight: 800;
     line-height: 1.05;
 }
@@ -278,7 +278,7 @@ button {
 .role-container {
     margin-top: 0.8rem;
     min-height: 1.8rem;
-    font-size: 1.15rem;
+    font-size: 1.22rem;
 }
 
 .role-text {
@@ -298,7 +298,8 @@ button {
 
 .hero-summary {
     margin-top: 1rem;
-    max-width: 52ch;
+    max-width: 56ch;
+    font-size: 1.02rem;
 }
 
 .hero-metrics {
@@ -310,7 +311,7 @@ button {
 
 .metric-card {
     border-radius: 18px;
-    padding: 1rem;
+    padding: 1.1rem;
 }
 
 .metric-label {
@@ -323,7 +324,7 @@ button {
 }
 
 .metric-card strong {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
 }
 
 .hero-avatar-container {
@@ -345,8 +346,8 @@ button {
 
 .hero-avatar img {
     display: block;
-    width: min(100%, 280px);
-    max-width: 280px;
+    width: min(100%, 300px);
+    max-width: 300px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
@@ -354,18 +355,29 @@ button {
 .hero-contact-bar {
     display: flex;
     gap: 1rem;
-    padding: 0.8rem 1rem;
+    padding: 0.9rem 1.1rem;
     border-radius: 999px;
 }
 
 .contact-icon {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     text-decoration: none;
     transition: transform var(--transition), color var(--transition);
 }
 
+.hero-contact-bar .contact-icon:nth-child(1) {
+    color: #4dabf7;
+}
+
+.hero-contact-bar .contact-icon:nth-child(2) {
+    color: #25d366;
+}
+
+.hero-contact-bar .contact-icon:nth-child(3) {
+    color: #ea4335;
+}
+
 .contact-icon:hover {
-    color: var(--accent);
     transform: translateY(-2px);
 }
 
@@ -386,7 +398,7 @@ button {
     margin-bottom: 1rem;
     padding-bottom: 0.25rem;
     border-bottom: 4px solid rgba(82, 82, 82, 0.8);
-    font-size: 1.35rem;
+    font-size: 1.45rem;
     font-weight: 800;
 }
 
@@ -418,11 +430,11 @@ button {
 }
 
 .info-card h3 {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 }
 
 .project-card-title {
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.35;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -448,7 +460,7 @@ button {
     align-items: center;
     gap: 0.7rem;
     color: var(--accent);
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 }
 
 .skill-tags {
@@ -463,8 +475,8 @@ button {
     border-radius: 999px;
     border: 1px solid var(--border);
     background: var(--surface);
-    padding: 0.55rem 0.95rem;
-    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
     transition: transform var(--transition), border-color var(--transition), background-color var(--transition);
 }
 
@@ -513,7 +525,7 @@ button {
 
 .btn {
     border-radius: 14px;
-    padding: 0.95rem 1.2rem;
+    padding: 1rem 1.25rem;
     text-decoration: none;
     font-weight: 800;
     display: inline-flex;
@@ -557,7 +569,7 @@ button {
 .gallery-photo img {
     display: block;
     width: 100%;
-    height: 240px;
+    height: 250px;
     object-fit: cover;
     user-select: none;
     -webkit-user-drag: none;
@@ -577,6 +589,7 @@ button {
     display: inline-flex;
     align-items: center;
     gap: 0.65rem;
+    font-size: 1rem;
 }
 
 footer {
@@ -616,14 +629,6 @@ footer {
     -webkit-user-drag: none;
 }
 
-.protected-media,
-.protected-media img,
-.protected-doc {
-    -webkit-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-}
-
 .photo-close {
     position: absolute;
     top: 1.25rem;
@@ -636,6 +641,14 @@ footer {
     border-radius: 999px;
     font-size: 1.6rem;
     cursor: pointer;
+}
+
+.protected-media,
+.protected-media img,
+.protected-doc {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
 }
 
 @media (max-width: 840px) {
