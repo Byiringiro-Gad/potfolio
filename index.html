@@ -1,21 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYIRINGIRO Gad | Portfolio</title>
-    <meta name="description" content="Portfolio of BYIRINGIRO Gad - Software Engineering Student & A2SV G7 Student specializing in algorithms and scalable software.">
+    <title>BYIRINGIRO Gad | Software Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of BYIRINGIRO Gad, a software engineering student building polished interfaces, sharpening algorithms, and growing toward global engineering standards.">
     <meta property="og:title" content="BYIRINGIRO Gad | Software Engineer Portfolio">
-    <meta property="og:description" content="Software Engineering student at AUCA & A2SV Generation 7. Focused on Data Structures, Algorithms, and System Design.">
+    <meta property="og:description" content="A software engineering portfolio featuring projects, coding practice, credentials, and contact information.">
     <meta property="og:image" content="gad.jpg">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dark-mode">
+    <div class="ambient ambient-a" aria-hidden="true"></div>
+    <div class="ambient ambient-b" aria-hidden="true"></div>
+    <div class="pointer-glow" aria-hidden="true"></div>
     <nav class="navbar">
         <div class="nav-container">
             <a href="#top" class="nav-logo">Gad</a>
@@ -25,331 +29,323 @@
                 <span></span>
             </button>
             <div class="nav-right">
-                <div id="nav-links" class="nav-links">
-                    <a href="#works" data-i18n="navWorks">Works</a>
-                    <a href="#projects" data-i18n="navProjects">Projects</a>
-                    <a href="#skills" data-i18n="navSkills">Skills</a>
-                    <a href="#coding" data-i18n="navCoding">Coding</a>
-                    <a href="#awards" data-i18n="navAwards">Awards</a>
-                    <a href="#bio" data-i18n="navJourney">Journey</a>
-                    <a href="#contact" data-i18n="navContact">Contact</a>
-                    <a href="#downloads" data-i18n="navDocs">Docs</a>
+                <div class="nav-topline">
+                    <div id="nav-links" class="nav-links">
+                        <a href="#works" data-i18n="navWorks">Works</a>
+                        <a href="#projects" data-i18n="navProjects">Projects</a>
+                        <a href="#skills" data-i18n="navSkills">Skills</a>
+                        <a href="#coding" data-i18n="navCoding">Signals</a>
+                        <a href="#contact" data-i18n="navContact">Contact</a>
+                    </div>
+                    <div class="nav-controls">
+                        <label class="select-wrap" aria-label="Select language">
+                            <i class="fas fa-globe"></i>
+                            <select id="language-select" class="nav-select">
+                                <option value="en">English</option>
+                                <option value="fr">Francais</option>
+                                <option value="rw">Kinyarwanda</option>
+                            </select>
+                        </label>
+                        <button id="theme-toggle" class="control-btn" title="Toggle theme" aria-label="Toggle theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="nav-controls">
-                    <label class="select-wrap" aria-label="Jump to section">
-                        <i class="fas fa-location-arrow"></i>
-                        <select id="section-jump" class="nav-select">
-                            <option value="" data-i18n="jumpTo">Jump to section</option>
-                            <option value="works" data-i18n="navWorks">Works</option>
-                            <option value="projects" data-i18n="navProjects">Projects</option>
-                            <option value="skills" data-i18n="navSkills">Skills</option>
-                            <option value="coding" data-i18n="navCoding">Coding Profiles</option>
-                            <option value="awards" data-i18n="navAwards">Awards</option>
-                            <option value="bio" data-i18n="navJourney">Journey</option>
-                            <option value="contact" data-i18n="navContact">Contact</option>
-                            <option value="downloads" data-i18n="navDocs">Docs</option>
-                            <option value="gallery" data-i18n="galleryTitle">Photo Gallery</option>
-                            <option value="social" data-i18n="socialTitle">On the Web</option>
-                        </select>
-                    </label>
-                    <label class="select-wrap language-wrap" aria-label="Select language">
-                        <i class="fas fa-globe"></i>
-                        <select id="language-select" class="nav-select">
-                            <option value="en">English</option>
-                            <option value="fr">Francais</option>
-                            <option value="rw">Kinyarwanda</option>
-                        </select>
-                    </label>
-                    <button id="theme-toggle" class="control-btn" title="Toggle theme" aria-label="Toggle theme">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </div>
+                <button id="nav-photo-trigger" class="nav-profile-card" aria-label="Open profile portrait" data-photo-src="gad.jpg" data-photo-caption="BYIRINGIRO Gad portrait">
+                    <span class="nav-profile-ring" aria-hidden="true"></span>
+                    <img src="gad.jpg" alt="BYIRINGIRO Gad profile photo">
+                    <span class="nav-profile-copy">
+                        <strong>BYIRINGIRO Gad</strong>
+                        <span>Open portrait</span>
+                    </span>
+                </button>
             </div>
         </div>
     </nav>
-
-    <main id="top" class="container">
-        <section class="hero">
-            <div class="hero-card glass">
-                <p data-i18n="heroIntro">
-                    Hello, this is Gad. Welcome to my personal website.
-                </p>
-            </div>
-
-            <div class="hero-header">
-                <div class="hero-text">
+    <main id="top" class="page-shell">
+        <section class="hero section-hero">
+            <div class="hero-grid">
+                <div class="hero-copy reveal">
                     <p class="eyebrow" data-i18n="eyebrow">Software Engineering Student</p>
-                    <h1 class="animated-name">BYIRINGIRO <span class="gradient-text">Gad</span></h1>
+                    <h1 class="hero-title">BYIRINGIRO <span class="gradient-text">Gad</span></h1>
                     <div class="role-container">
                         <span id="role-text" class="role-text">Software Engineer</span>
                         <span class="cursor">|</span>
                     </div>
-                    <p class="hero-summary" data-i18n="heroSummary">
-                        I build practical software, sharpen problem-solving through algorithms, and keep growing through A2SV and university training.
-                    </p>
+                    <p class="hero-summary" data-i18n="heroSummary">I build practical software, sharpen problem-solving through algorithms, and keep growing through A2SV and university training.</p>
+                    <div class="hero-actions">
+                        <a href="BYIRINGIRO_Gad_CV.pdf" download class="btn btn-primary"><i class="fas fa-file-arrow-down"></i><span data-i18n="downloadResume">Download Resume</span></a>
+                        <a href="https://github.com/Byiringiro-Gad" target="_blank" rel="noreferrer" class="btn btn-outline"><i class="fab fa-github"></i><span data-i18n="visitGithub">Visit GitHub</span></a>
+                        <a href="#contact" class="btn btn-ghost"><i class="fas fa-paper-plane"></i><span data-i18n="contactCta">Let's Connect</span></a>
+                    </div>
                     <div class="hero-metrics">
-                        <div class="metric-card glass">
-                            <span class="metric-label" data-i18n="visitLabel">Portfolio visits</span>
-                            <strong id="visit-count">...</strong>
-                        </div>
-                        <div class="metric-card glass">
-                            <span class="metric-label" data-i18n="locationLabel">Base</span>
-                            <strong data-i18n="locationValue">Kigali, Rwanda</strong>
-                        </div>
+                        <article class="metric-card glass"><span class="metric-label" data-i18n="visitLabel">Portfolio visits</span><strong id="visit-count">0</strong></article>
+                        <article class="metric-card glass"><span class="metric-label" data-i18n="featuredLabel">Featured work</span><strong id="featured-count">3</strong></article>
+                        <article class="metric-card glass"><span class="metric-label" data-i18n="archiveLabel">Problem archive</span><strong>47+</strong></article>
+                        <article class="metric-card glass"><span class="metric-label" data-i18n="locationLabel">Base</span><strong data-i18n="locationValue">Kigali, Rwanda</strong></article>
                     </div>
                 </div>
-
-                <div class="hero-avatar-container">
-                    <button id="photo-trigger" class="hero-avatar" aria-label="Open full profile photo">
-                        <img src="gad.jpg" alt="BYIRINGIRO Gad portrait">
-                    </button>
-                    <div class="hero-contact-bar glass">
-                        <a href="tel:+250783472305" class="contact-icon" title="Call">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                        <a href="https://wa.me/250783472305" target="_blank" rel="noreferrer" class="contact-icon" title="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="mailto:gadb5743@gmail.com" class="contact-icon" title="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+                <div class="hero-visual reveal">
+                    <div class="hero-stage glass">
+                        <div class="portrait-stage">
+                            <div class="hero-aura hero-aura-a" aria-hidden="true"></div>
+                            <div class="hero-aura hero-aura-b" aria-hidden="true"></div>
+                            <div class="portrait-orbit orbit-one"></div>
+                            <div class="portrait-orbit orbit-two"></div>
+                            <div class="hero-float-card hero-float-card-top">
+                                <span>Training lane</span>
+                                <strong>A2SV Generation 7</strong>
+                            </div>
+                            <div class="hero-avatar" aria-label="BYIRINGIRO Gad portrait">
+                                <span class="hero-avatar-frame">
+                                    <img src="gad.jpg" alt="BYIRINGIRO Gad portrait">
+                                </span>
+                                <span class="hero-avatar-shine" aria-hidden="true"></span>
+                                <span class="hero-avatar-caption">
+                                    <strong>BYIRINGIRO Gad</strong>
+                                    <span>Software Engineer</span>
+                                </span>
+                                <button id="photo-trigger" class="hero-avatar-expand" aria-label="Open full profile photo" data-photo-src="gad.jpg" data-photo-caption="BYIRINGIRO Gad portrait">
+                                    <i class="fas fa-expand"></i>
+                                    <span>View portrait</span>
+                                </button>
+                            </div>
+                            <div class="hero-badge glass">
+                                <span data-i18n="badgeTitle">Current focus</span>
+                                <strong data-i18n="badgeBody">Front-end polish, algorithms, and SQL analytics</strong>
+                            </div>
+                            <div class="hero-float-card hero-float-card-bottom">
+                                <span>Base</span>
+                                <strong>Kigali, Rwanda</strong>
+                            </div>
+                        </div>
+                        <div class="hero-stage-foot">
+                            <div class="hero-stage-copy">
+                                <span class="hero-stage-kicker">Profile signal</span>
+                                <strong>Front-end taste. Algorithm discipline.</strong>
+                            </div>
+                            <div class="hero-stage-tags">
+                                <span>Python</span>
+                                <span>JavaScript</span>
+                                <span>SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-panel glass">
+                        <div class="hero-panel-head">
+                            <span class="panel-kicker" data-i18n="panelKicker">Engineering profile</span>
+                            <h2 data-i18n="panelTitle">Product eye. Training intensity. Public proof.</h2>
+                        </div>
+                        <div class="hero-dossier">
+                            <div class="hero-dossier-row"><span>Focus</span><strong>Interface quality, algorithms, data</strong></div>
+                            <div class="hero-dossier-row"><span>Training</span><strong>A2SV Generation 7 and AUCA</strong></div>
+                            <div class="hero-dossier-row"><span>Mode</span><strong>Build, learn, and improve in public</strong></div>
+                        </div>
+                        <p data-i18n="panelSummary">I build with visual care, practice algorithms consistently, and document real progress through public work.</p>
+                        <div class="hero-contact-bar">
+                            <a href="tel:+250783472305" class="contact-icon" title="Call"><i class="fas fa-phone"></i></a>
+                            <a href="https://wa.me/250783472305" target="_blank" rel="noreferrer" class="contact-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="mailto:gadb5743@gmail.com" class="contact-icon" title="Email"><i class="fas fa-envelope"></i></a>
+                            <a href="https://www.linkedin.com/in/byiringiro-gad-6533612a7" target="_blank" rel="noreferrer" class="contact-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="marquee" aria-label="Focus areas">
+                <div class="marquee-track">
+                    <span>Responsive interfaces</span>
+                    <span>Algorithm discipline</span>
+                    <span>SQL analytics</span>
+                    <span>A2SV training</span>
+                    <span>Curated public work</span>
+                    <span>Responsive interfaces</span>
+                    <span>Algorithm discipline</span>
+                    <span>SQL analytics</span>
+                </div>
+            </div>
         </section>
-
         <section id="works" class="section">
-            <h2 class="section-title" data-i18n="workTitle">Work</h2>
-            <p class="section-content" data-i18n="workBody">
-                I am a software engineering student who enjoys learning new things and solving real problems through technology. I am currently part of A2SV Generation 7, where I train intensively in data structures, algorithms, and system design to build high-impact digital solutions.
-            </p>
+            <div class="section-heading reveal">
+                <div>
+                    <p class="eyebrow" data-i18n="workEyebrow">What I do</p>
+                    <h2 class="section-title" data-i18n="workTitle">Work</h2>
+                </div>
+            </div>
+            <div class="works-layout">
+                <article class="focus-card glass reveal"><div class="focus-icon"><i class="fas fa-swatchbook"></i></div><h3 data-i18n="workCard1Title">Product-minded front-end</h3><p data-i18n="workCard1Body">I care about interface quality, hierarchy, accessibility, responsiveness, and the details that make software feel finished.</p></article>
+                <article class="focus-card glass reveal"><div class="focus-icon"><i class="fas fa-brain"></i></div><h3 data-i18n="workCard2Title">Algorithmic consistency</h3><p data-i18n="workCard2Body">I build problem-solving depth through disciplined practice in data structures, recursion, trees, backtracking, and contest-style thinking.</p></article>
+                <article class="focus-card glass reveal"><div class="focus-icon"><i class="fas fa-database"></i></div><h3 data-i18n="workCard3Title">Data and database thinking</h3><p data-i18n="workCard3Body">I am building stronger foundations in SQL, analytics, Oracle workflows, joins, ranking, and window-function based reporting.</p></article>
+            </div>
         </section>
-
         <section id="projects" class="section">
-            <div class="section-heading">
-                <h2 class="section-title" data-i18n="projectsTitle">Projects</h2>
+            <div class="section-heading reveal">
+                <div>
+                    <p class="eyebrow" data-i18n="projectsEyebrow">Selected work</p>
+                    <h2 class="section-title" data-i18n="projectsTitle">Projects</h2>
+                </div>
                 <a class="section-link" href="https://github.com/Byiringiro-Gad?tab=repositories" target="_blank" rel="noreferrer" data-i18n="projectsCta">View all on GitHub</a>
             </div>
-            <p class="section-content" data-i18n="projectsIntro">
-                Featured repositories are loaded from GitHub so this section stays current as I keep building.
-            </p>
-            <div id="projects-grid" class="card-grid">
-                <article class="info-card">
-                    <h3>Loading projects...</h3>
-                    <p data-i18n="projectsLoading">Fetching recent public repositories from GitHub.</p>
-                </article>
-            </div>
+            <div id="projects-grid" class="projects-grid"></div>
         </section>
-
         <section id="skills" class="section">
-            <h2 class="section-title" data-i18n="skillsTitle">Skills</h2>
+            <div class="section-heading reveal">
+                <div>
+                    <p class="eyebrow" data-i18n="skillsEyebrow">Capabilities</p>
+                    <h2 class="section-title" data-i18n="skillsTitle">Skills</h2>
+                </div>
+            </div>
             <div class="skills-layout">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> <span data-i18n="skillCoreTitle">Core Technical Skills</span></h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Data Structures &amp; Algorithms</span>
-                        <span class="skill-tag">System Design</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">HTML / CSS / JavaScript</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">Git &amp; GitHub</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> <span data-i18n="skillPlatformTitle">Practice & Platforms</span></h3>
-                    <div class="profile-links">
-                        <a class="profile-card" href="https://leetcode.com/u/byiringiro-gad/" target="_blank" rel="noreferrer">
-                            <strong>LeetCode</strong>
-                            <span data-i18n="leetcodeCopy">Algorithm practice and contest-style problem solving.</span>
-                        </a>
-                        <a class="profile-card" href="https://github.com/Byiringiro-Gad" target="_blank" rel="noreferrer">
-                            <strong>GitHub</strong>
-                            <span data-i18n="githubCopy">Code, repositories, and continuous learning projects.</span>
-                        </a>
-                        <a class="profile-card" href="https://www.linkedin.com/in/byiringiro-gad-6533612a7" target="_blank" rel="noreferrer">
-                            <strong>LinkedIn</strong>
-                            <span data-i18n="linkedinCopy">Professional profile, network, and academic progress.</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-language"></i> <span data-i18n="skillLanguageTitle">Languages</span></h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag" data-i18n="langEnglish">English - Proficient</span>
-                        <span class="skill-tag" data-i18n="langFrench">French - Working proficiency</span>
-                        <span class="skill-tag" data-i18n="langKinyarwanda">Kinyarwanda - Native</span>
-                    </div>
-                </div>
+                <article class="skill-category glass reveal"><h3><i class="fas fa-code"></i> <span data-i18n="skillCoreTitle">Core Technical Skills</span></h3><div class="skill-tags"><span class="skill-tag">Data Structures &amp; Algorithms</span><span class="skill-tag">System Design</span><span class="skill-tag">Python</span><span class="skill-tag">HTML / CSS / JavaScript</span><span class="skill-tag">SQL</span><span class="skill-tag">Git &amp; GitHub</span></div></article>
+                <article class="skill-category glass reveal"><h3><i class="fas fa-laptop-code"></i> <span data-i18n="skillPlatformTitle">Practice & Platforms</span></h3><div class="profile-links"><a class="profile-card" href="https://leetcode.com/u/byiringiro-gad/" target="_blank" rel="noreferrer"><strong>LeetCode</strong><span data-i18n="leetcodeCopy">Algorithm practice and contest-style problem solving.</span></a><a class="profile-card" href="https://github.com/Byiringiro-Gad" target="_blank" rel="noreferrer"><strong>GitHub</strong><span data-i18n="githubCopy">Code, repositories, and continuous learning projects.</span></a><a class="profile-card" href="https://www.linkedin.com/in/byiringiro-gad-6533612a7" target="_blank" rel="noreferrer"><strong>LinkedIn</strong><span data-i18n="linkedinCopy">Professional profile, network, and academic progress.</span></a></div></article>
+                <article class="skill-category glass reveal"><h3><i class="fas fa-language"></i> <span data-i18n="skillLanguageTitle">Languages</span></h3><div class="skill-tags"><span class="skill-tag" data-i18n="langEnglish">English - Proficient</span><span class="skill-tag" data-i18n="langFrench">French - Working proficiency</span><span class="skill-tag" data-i18n="langKinyarwanda">Kinyarwanda - Native</span></div></article>
             </div>
         </section>
-
         <section id="coding" class="section">
-            <h2 class="section-title" data-i18n="codingTitle">Coding & Consistency</h2>
-            <div class="card-grid coding-visuals">
-                <div class="profile-card glass visual-card">
-                    <div class="platform-header">
-                        <i class="fas fa-code"></i>
-                        <strong>LeetCode</strong>
-                        <span class="live-indicator"></span>
-                    </div>
-                    <div class="visual-stats">
-                        <img src="https://leetcard.jacoblin.cool/byiringiro-gad?theme=dark&font=M+PLUS+Rounded+1c&ext=activity" alt="LeetCode Activity" loading="lazy" style="width: 100%; border-radius: 12px;">
-                    </div>
+            <div class="section-heading reveal">
+                <div>
+                    <p class="eyebrow" data-i18n="codingEyebrow">Execution signals</p>
+                    <h2 class="section-title" data-i18n="codingTitle">Coding & Consistency</h2>
+                </div>
+            </div>
+            <div class="coding-grid">
+                <article class="coding-card glass reveal">
+                    <div class="platform-header"><div><span class="platform-kicker">LeetCode</span><strong data-i18n="leetcodeCardTitle">Algorithm archive and daily sharpness</strong></div><span class="live-indicator"></span></div>
+                    <div class="visual-stats"><img src="https://leetcard.jacoblin.cool/byiringiro-gad?theme=dark&font=Manrope&ext=activity" alt="LeetCode Activity" loading="lazy"></div>
+                    <div class="signal-row"><span class="signal-pill" data-i18n="leetcodeSignal">47+ tracked solutions in the public archive</span></div>
                     <a class="btn btn-outline btn-sm" href="https://leetcode.com/u/byiringiro-gad/" target="_blank" rel="noreferrer" data-i18n="viewProfile">View Profile</a>
-                </div>
-
-                <div class="profile-card glass visual-card">
-                    <div class="platform-header">
-                        <i class="fas fa-terminal"></i>
-                        <strong>Codeforces</strong>
-                        <span class="live-indicator"></span>
-                    </div>
-                    <div id="cf-visual-stats" class="visual-stats">
-                        <div class="loading-dots" data-i18n="loading">Loading graph</div>
-                    </div>
+                </article>
+                <article class="coding-card glass reveal">
+                    <div class="platform-header"><div><span class="platform-kicker">Codeforces</span><strong data-i18n="codeforcesCardTitle">Competitive programming signal</strong></div><span class="live-indicator"></span></div>
+                    <div id="cf-visual-stats" class="visual-stats"><div class="loading-dots" data-i18n="loading">Loading graph</div></div>
+                    <div id="cf-summary" class="signal-row"></div>
                     <a class="btn btn-outline btn-sm" href="https://codeforces.com/profile/gadcoder" target="_blank" rel="noreferrer" data-i18n="viewProfile">View Profile</a>
-                </div>
+                </article>
+                <article class="coding-card glass reveal">
+                    <div class="platform-header"><div><span class="platform-kicker">GitHub</span><strong data-i18n="githubCardTitle">Public footprint overview</strong></div><span class="live-indicator"></span></div>
+                    <div class="visual-stats"><img src="https://github-readme-stats.vercel.app/api?username=Byiringiro-Gad&show_icons=true&hide_border=true&bg_color=00000000&title_color=73f0c8&text_color=eaf2ff&icon_color=ffb86b&ring_color=73f0c8" alt="GitHub stats" loading="lazy"></div>
+                    <div id="github-summary" class="signal-row"><span class="signal-pill" data-i18n="githubLoading">Public repository data loading...</span></div>
+                    <a class="btn btn-outline btn-sm" href="https://github.com/Byiringiro-Gad?tab=repositories" target="_blank" rel="noreferrer" data-i18n="visitGithub">Visit GitHub</a>
+                </article>
             </div>
         </section>
-
         <section id="awards" class="section">
-            <h2 class="section-title" data-i18n="awardsTitle">Honors &amp; Awards</h2>
-            <div class="card-grid">
-                <article class="info-card">
-                    <h3 data-i18n="awardEfTitle">EF Graduation Certificate</h3>
-                    <p data-i18n="awardEfBody">Certificate documenting English language learning and program completion.</p>
-                    <a class="inline-link" href="ef graduation.pdf" target="_blank" rel="noreferrer" data-i18n="openCertificate">Open certificate</a>
-                </article>
-                <article class="info-card">
-                    <h3 data-i18n="awardCiscoTitle">Cisco Certificate</h3>
-                    <p data-i18n="awardCiscoBody">Networking and technical training certificate from Cisco.</p>
-                    <a class="inline-link" href="cisco.pdf" target="_blank" rel="noreferrer" data-i18n="openCertificate">Open certificate</a>
-                </article>
-                <article class="info-card">
-                    <h3 data-i18n="awardIsocTitle">Internet Society Certificate</h3>
-                    <p data-i18n="awardIsocBody">Recognition from the Internet Society highlighting my engagement with global internet learning, community, and digital development.</p>
-                    <a class="inline-link" href="https://certificates.isoc.org/473fe7e7-1f03-45f0-b095-67f2153e4941#acc.c4DEhkqG" target="_blank" rel="noreferrer" data-i18n="openCertificate">Open certificate</a>
-                </article>
+            <div class="section-heading reveal">
+                <div>
+                    <p class="eyebrow" data-i18n="awardsEyebrow">Recognition</p>
+                    <h2 class="section-title" data-i18n="awardsTitle">Honors &amp; Awards</h2>
+                </div>
             </div>
-            <div class="certificate-frame">
-                <iframe
-                    src="https://certificates.isoc.org/473fe7e7-1f03-45f0-b095-67f2153e4941#acc.c4DEhkqG"
-                    title="Internet Society certificate"
-                    loading="lazy">
-                </iframe>
+            <div class="awards-layout">
+                <div class="award-grid">
+                    <article class="award-card glass reveal"><span class="award-tag">EF</span><h3 data-i18n="awardEfTitle">EF Graduation Certificate</h3><p data-i18n="awardEfBody">Certificate documenting English language learning and program completion.</p><a class="inline-link" href="ef graduation.pdf" target="_blank" rel="noreferrer" data-i18n="openCertificate">Open certificate</a></article>
+                    <article class="award-card glass reveal"><span class="award-tag">Cisco</span><h3 data-i18n="awardCiscoTitle">Cisco Certificate</h3><p data-i18n="awardCiscoBody">Networking and technical training certificate from Cisco.</p><a class="inline-link" href="cisco.pdf" target="_blank" rel="noreferrer" data-i18n="openCertificate">Open certificate</a></article>
+                </div>
+                <aside class="credential-spotlight glass reveal">
+                    <p class="eyebrow" data-i18n="spotlightEyebrow">Credential spotlight</p>
+                    <h3 data-i18n="spotlightTitle">Internet Society recognition</h3>
+                    <p data-i18n="spotlightBody">This certificate reflects my participation in an international learning community focused on the internet and digital development.</p>
+                    <a href="https://certificates.isoc.org/473fe7e7-1f03-45f0-b095-67f2153e4941#acc.c4DEhkqG" target="_blank" rel="noreferrer" class="btn btn-primary"><i class="fas fa-arrow-up-right-from-square"></i><span data-i18n="openCertificate">Open certificate</span></a>
+                </aside>
             </div>
         </section>
-
         <section id="bio" class="section">
-            <h2 class="section-title" data-i18n="journeyTitle">Professional Journey</h2>
-            <div class="bio-row">
-                <span class="bio-year">2023 - Present</span>
-                <span data-i18n="journey1">Pursuing a B.Sc. in Software Engineering at Adventist University of Central Africa (AUCA), with strong academic performance and continued technical growth.</span>
+            <div class="section-heading reveal">
+                <div>
+                    <p class="eyebrow" data-i18n="journeyEyebrow">Timeline</p>
+                    <h2 class="section-title" data-i18n="journeyTitle">Professional Journey</h2>
+                </div>
             </div>
-            <div class="bio-row">
-                <span class="bio-year">2025 - Present</span>
-                <span data-i18n="journey2">Training as an A2SV Generation 7 student with strong focus on data structures, algorithms, and system design for scalable software.</span>
-            </div>
-            <div class="bio-row">
-                <span class="bio-year">2021</span>
-                <span data-i18n="journey3">Graduated from Ecoles de Science de Musanze (MCB).</span>
+            <div class="journey-layout">
+                <div class="timeline-card glass reveal">
+                    <div class="bio-row"><span class="bio-year">2025 - Present</span><span data-i18n="journey2">Training as an A2SV Generation 7 student with strong focus on data structures, algorithms, and system design for scalable software.</span></div>
+                    <div class="bio-row"><span class="bio-year">2023 - Present</span><span data-i18n="journey1">Pursuing a B.Sc. in Software Engineering at Adventist University of Central Africa (AUCA), with strong academic performance and continued technical growth.</span></div>
+                    <div class="bio-row"><span class="bio-year">2021</span><span data-i18n="journey3">Graduated from Ecoles de Science de Musanze (MCB).</span></div>
+                </div>
+                <article class="philosophy-card glass reveal">
+                    <p class="eyebrow" data-i18n="philosophyEyebrow">Working style</p>
+                    <h3 data-i18n="philosophyTitle">Clarity, consistency, and visible growth.</h3>
+                    <p data-i18n="philosophyBody">I value clear thinking, steady execution, and continuous improvement in the way I learn and build.</p>
+                </article>
             </div>
         </section>
-
         <section id="downloads" class="section">
-            <h2 class="section-title" data-i18n="docsTitle">Documents</h2>
-            <div class="cta-group">
-                <a href="BYIRINGIRO_Gad_CV.pdf" download class="btn btn-primary">
-                    <i class="fas fa-file-pdf"></i> <span data-i18n="downloadResume">Download Resume</span>
-                </a>
-                <a href="Transcript_28355 (3).pdf" target="_blank" rel="noreferrer" class="btn btn-outline protected-doc">
-                    <i class="fas fa-file-invoice"></i> <span data-i18n="viewTranscript">View Transcript</span>
-                </a>
-                <a href="cisco.pdf" target="_blank" rel="noreferrer" class="btn btn-outline protected-doc">
-                    <i class="fas fa-award"></i> <span data-i18n="viewCisco">View Cisco Certificate</span>
-                </a>
-                <a href="ef graduation.pdf" target="_blank" rel="noreferrer" class="btn btn-outline protected-doc">
-                    <i class="fas fa-graduation-cap"></i> <span data-i18n="viewEf">View EF Certificate</span>
-                </a>
+            <div class="section-heading reveal">
+                <div>
+                    <p class="eyebrow" data-i18n="docsEyebrow">Supporting material</p>
+                    <h2 class="section-title" data-i18n="docsTitle">Documents</h2>
+                </div>
+            </div>
+            <div class="downloads-grid">
+                <a href="BYIRINGIRO_Gad_CV.pdf" download class="download-card glass reveal"><i class="fas fa-file-pdf"></i><strong data-i18n="downloadResume">Download Resume</strong><span data-i18n="resumeHint">Best starting point for recruiters and collaborators.</span></a>
+                <a href="Transcript_28355 (3).pdf" target="_blank" rel="noreferrer" class="download-card glass reveal"><i class="fas fa-file-lines"></i><strong data-i18n="viewTranscript">View Transcript</strong><span data-i18n="transcriptHint">Academic record and coursework history.</span></a>
             </div>
         </section>
-
         <section id="gallery" class="section">
-            <h2 class="section-title" data-i18n="galleryTitle">Photo Gallery</h2>
-            <p class="section-content" data-i18n="galleryBody">
-                Tap or click the picture to view it in full size.
-            </p>
+            <div class="section-heading reveal">
+                <div>
+                    <p class="eyebrow" data-i18n="galleryEyebrow">Visual layer</p>
+                    <h2 class="section-title" data-i18n="galleryTitle">Photo Gallery</h2>
+                </div>
+            </div>
             <div class="gallery-grid">
-                <button class="gallery-photo protected-media" id="gallery-photo-trigger" aria-label="Open profile image" data-photo-src="gad.jpg">
-                    <img src="gad.jpg" alt="BYIRINGIRO Gad full profile picture" draggable="false">
-                </button>
-                <button class="gallery-photo protected-media" aria-label="Open gallery photo 1" data-photo-src="gallery1.jpeg">
-                    <img src="gallery1.jpeg" alt="Gallery photo 1" draggable="false">
-                </button>
-                <button class="gallery-photo protected-media" aria-label="Open gallery photo 2" data-photo-src="gallery2.jpeg">
-                    <img src="gallery2.jpeg" alt="Gallery photo 2" draggable="false">
-                </button>
-                <button class="gallery-photo protected-media" aria-label="Open gallery photo 3" data-photo-src="gallery3.jpeg">
-                    <img src="gallery3.jpeg" alt="Gallery photo 3" draggable="false">
-                </button>
-                <button class="gallery-photo protected-media" aria-label="Open gallery photo 4" data-photo-src="gellery3.jpeg">
-                    <img src="gellery3.jpeg" alt="Gallery photo 4" draggable="false">
-                </button>
+                <button class="gallery-photo reveal" aria-label="Open gallery photo 1" data-photo-src="gallery1.jpeg" data-photo-caption="Gallery photo 1"><img src="gallery1.jpeg" alt="Gallery photo 1" draggable="false"></button>
+                <button class="gallery-photo reveal" aria-label="Open gallery photo 2" data-photo-src="gallery2.jpeg" data-photo-caption="Gallery photo 2"><img src="gallery2.jpeg" alt="Gallery photo 2" draggable="false"></button>
+                <button class="gallery-photo reveal" aria-label="Open gallery photo 3" data-photo-src="gallery3.jpeg" data-photo-caption="Gallery photo 3"><img src="gallery3.jpeg" alt="Gallery photo 3" draggable="false"></button>
+                <button class="gallery-photo reveal" aria-label="Open gallery photo 4" data-photo-src="gellery3.jpeg" data-photo-caption="Gallery photo 4"><img src="gellery3.jpeg" alt="Gallery photo 4" draggable="false"></button>
             </div>
         </section>
-
         <section id="social" class="section">
-            <h2 class="section-title" data-i18n="socialTitle">On the Web</h2>
-            <ul class="social-list">
-                <li><a href="https://github.com/Byiringiro-Gad" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/byiringiro-gad-6533612a7" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                <li><a href="https://leetcode.com/u/byiringiro-gad/" target="_blank" rel="noreferrer"><i class="fas fa-code"></i> LeetCode</a></li>
-                <li><a href="mailto:gadb5743@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
-            </ul>
+            <div class="section-heading reveal">
+                <div>
+                    <p class="eyebrow" data-i18n="socialEyebrow">Presence</p>
+                    <h2 class="section-title" data-i18n="socialTitle">On the Web</h2>
+                </div>
+            </div>
+            <div class="social-grid">
+                <a class="social-card glass reveal" href="https://github.com/Byiringiro-Gad" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><div><strong>GitHub</strong><span data-i18n="socialGithub">Repositories, learning trail, and selected public work.</span></div></a>
+                <a class="social-card glass reveal" href="https://leetcode.com/u/byiringiro-gad/" target="_blank" rel="noreferrer"><i class="fas fa-code"></i><div><strong>LeetCode</strong><span data-i18n="socialLeetcode">Consistency in algorithm problem solving.</span></div></a>
+                <a class="social-card glass reveal" href="https://www.linkedin.com/in/byiringiro-gad-6533612a7" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i><div><strong>LinkedIn</strong><span data-i18n="socialLinkedin">Professional identity and academic progression.</span></div></a>
+            </div>
         </section>
-
-        <section id="hobbies" class="section">
-            <h2 class="section-title" data-i18n="hobbiesTitle">I Love</h2>
-            <p class="section-content" data-i18n="hobbiesBody">
-                Coding, reading, football, and solving real-world problems.
-            </p>
-        </section>
-
         <section id="contact" class="section">
-            <h2 class="section-title" data-i18n="contactTitle">Get in Touch</h2>
-            <div id="contact-status" class="status-message glass" style="display: none; padding: 1rem; border-radius: 12px; margin-bottom: 1rem; text-align: center; font-weight: 700;"></div>
-            <form id="portfolio-form" action="https://formspree.io/f/gadb5743@gmail.com" method="POST" class="contact-form glass">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name" data-i18n="formName">Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Your name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email" data-i18n="formEmail">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Your email">
+            <div class="section-heading reveal">
+                <div>
+                    <p class="eyebrow" data-i18n="contactEyebrow">Reach out</p>
+                    <h2 class="section-title" data-i18n="contactTitle">Get in Touch</h2>
+                </div>
+            </div>
+            <div class="contact-layout">
+                <div class="contact-panel glass reveal">
+                    <h3 data-i18n="contactPanelTitle">Open to internships, collaboration, and serious engineering conversations.</h3>
+                    <p data-i18n="contactPanelBody">If you are hiring, reviewing emerging engineers, or interested in working together, email and direct links are provided here.</p>
+                    <div class="contact-direct">
+                        <a href="mailto:gadb5743@gmail.com"><i class="fas fa-envelope"></i> gadb5743@gmail.com</a>
+                        <a href="tel:+250783472305"><i class="fas fa-phone"></i> +250 783 472 305</a>
+                        <a href="https://wa.me/250783472305" target="_blank" rel="noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="message" data-i18n="formMessage">Message</label>
-                    <textarea id="message" name="message" rows="4" required placeholder="Write your message..."></textarea>
-                </div>
-                <button type="submit" id="submit-btn" class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i> <span data-i18n="formSubmit">Send Message</span>
-                </button>
-            </form>
+                <form id="portfolio-form" action="https://formspree.io/f/mqaebrjr" method="POST" class="contact-form glass reveal">
+                    <div id="contact-status" class="status-message" aria-live="polite"></div>
+                    <div class="form-row">
+                        <div class="form-group"><label for="name" data-i18n="formName">Name</label><input type="text" id="name" name="name" required data-i18n-placeholder="formNamePlaceholder" placeholder="Your name"></div>
+                        <div class="form-group"><label for="email" data-i18n="formEmail">Email</label><input type="email" id="email" name="email" required data-i18n-placeholder="formEmailPlaceholder" placeholder="Your email"></div>
+                    </div>
+                    <div class="form-group"><label for="message" data-i18n="formMessage">Message</label><textarea id="message" name="message" rows="5" required data-i18n-placeholder="formMessagePlaceholder" placeholder="Write your message..."></textarea></div>
+                    <button type="submit" id="submit-btn" class="btn btn-primary"><i class="fas fa-paper-plane"></i><span data-i18n="formSubmit">Send Message</span></button>
+                </form>
+            </div>
         </section>
-
-        <footer>
+        <footer class="footer reveal">
             <p data-i18n="footerCopy">&copy; 2026 BYIRINGIRO Gad. All rights reserved.</p>
         </footer>
     </main>
-
     <div id="photo-modal" class="photo-modal" aria-hidden="true">
         <button id="photo-close" class="photo-close" aria-label="Close photo viewer">&times;</button>
-        <img id="photo-modal-image" class="protected-media" src="gad.jpg" alt="BYIRINGIRO Gad full portrait" draggable="false">
+        <img id="photo-modal-image" src="gad.jpg" alt="BYIRINGIRO Gad full portrait" draggable="false">
+        <p id="photo-caption" class="photo-caption"></p>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="effects.js"></script>
 </body>
 </html>
