@@ -391,51 +391,46 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function handleContactForm() {
-        contactForm?.addEventListener("submit", async (event) => {
-            event.preventDefault();
-            const submitBtn = contactForm.querySelector("#submit-btn");
-            const originalBtnText = submitBtn.innerHTML;
-            
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-            
-            try {
-                const formData = new FormData(contactForm);
-                const response = await fetch(contactForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                });
-                
-                if (response.ok) {
-                    contactStatus.textContent = tr("contactSuccess");
-                    contactStatus.style.display = "block";
-                    contactStatus.style.background = "rgba(123, 240, 203, 0.16)";
-                    contactStatus.style.border = "1px solid rgba(123, 240, 203, 0.3)";
-                    contactStatus.style.color = "var(--accent)";
-                    contactForm.reset();
-                } else {
-                    throw new Error();
-                }
-            } catch {
-                contactStatus.textContent = tr("contactError");
-                contactStatus.style.display = "block";
-                contactStatus.style.background = "rgba(255, 125, 125, 0.12)";
-                contactStatus.style.border = "1px solid rgba(255, 125, 125, 0.3)";
-                contactStatus.style.color = "var(--danger)";
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalBtnText;
-                setTimeout(() => {
-                    contactStatus.style.opacity = "0";
-                    setTimeout(() => {
-                        contactStatus.style.display = "none";
-                        contactStatus.style.opacity = "1";
-                    }, 500);
-                }, 5000);
-            }
-        });
-    }
+    const form = document.getElementById("portfolio-form");
+    const submitBtn = document.getElementById("submit-btn");
+    const status = document.getElementById("contact-status");
+
+    if (!form) return;
+
+    emailjs.init("aZOv-L2J5XrKxirBM"); // IMPORTANT
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
+        const params = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value
+        };
+
+        try {
+            await emailjs.send(
+                "service_vl53akj",
+                "template_d0fse2s",
+                params
+            );
+
+            status.textContent = "Thank you for contacting me.\nYour message has been received, I will get back to you soon!";
+            status.style.display = "block";
+
+            form.reset();
+        } catch (err) {
+            status.textContent = "Failed to send message.";
+            status.style.display = "block";
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = `<i class="fas fa-paper-plane"></i><span>Send Message</span>`;
+        }
+    });
+}
 
     function observeReveals() {
         const observer = new IntersectionObserver((entries) => {

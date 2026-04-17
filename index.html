@@ -54,10 +54,7 @@
                 <button id="nav-photo-trigger" class="nav-profile-card" aria-label="Open profile portrait" data-photo-src="gad.jpg" data-photo-caption="BYIRINGIRO Gad portrait">
                     <span class="nav-profile-ring" aria-hidden="true"></span>
                     <img src="gad.jpg" alt="BYIRINGIRO Gad profile photo">
-                    <span class="nav-profile-copy">
-                        <strong>BYIRINGIRO Gad</strong>
-                        <span>Open portrait</span>
-                    </span>
+    
                 </button>
             </div>
         </div>
@@ -98,7 +95,7 @@
                             </div>
                             <div class="hero-avatar" aria-label="BYIRINGIRO Gad portrait">
                                 <span class="hero-avatar-frame">
-                                    <img src="gad.jpg" alt="BYIRINGIRO Gad portrait">
+                                    <img src="gad.jpg" alt="Gad">
                                 </span>
                                 <span class="hero-avatar-shine" aria-hidden="true"></span>
                                 <span class="hero-avatar-caption">
@@ -302,9 +299,9 @@
                 </div>
             </div>
             <div class="social-grid">
-                <a class="social-card glass reveal" href="https://github.com/Byiringiro-Gad" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><div><strong>GitHub</strong><span data-i18n="socialGithub">Repositories, learning trail, and selected public work.</span></div></a>
-                <a class="social-card glass reveal" href="https://leetcode.com/u/byiringiro-gad/" target="_blank" rel="noreferrer"><i class="fas fa-code"></i><div><strong>LeetCode</strong><span data-i18n="socialLeetcode">Consistency in algorithm problem solving.</span></div></a>
-                <a class="social-card glass reveal" href="https://www.linkedin.com/in/byiringiro-gad-6533612a7" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i><div><strong>LinkedIn</strong><span data-i18n="socialLinkedin">Professional identity and academic progression.</span></div></a>
+                <a class="social-card glass reveal" href="https://github.com/Byiringiro-Gad" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><div><strong>GitHub  </strong><span data-i18n="socialGithub">Repositories, learning trail, and selected public work.</span></div></a>
+                <a class="social-card glass reveal" href="https://leetcode.com/u/byiringiro-gad/" target="_blank" rel="noreferrer"><i class="fas fa-code"></i><div><strong>LeetCode  </strong><span data-i18n="socialLeetcode">Consistency in algorithm problem solving.</span></div></a>
+                <a class="social-card glass reveal" href="https://www.linkedin.com/in/byiringiro-gad-6533612a7" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i><div><strong>LinkedIn  </strong><span data-i18n="socialLinkedin">Professional identity and academic progression.</span></div></a>
             </div>
         </section>
         <section id="contact" class="section">
@@ -317,15 +314,15 @@
             <div class="contact-layout">
                 <div class="contact-panel glass reveal">
                     <h3 data-i18n="contactPanelTitle">Open to internships, collaboration, and serious engineering conversations.</h3>
-                    <p data-i18n="contactPanelBody">If you are hiring, reviewing emerging engineers, or interested in working together, email and direct links are provided here.</p>
+                    <p data-i18n="contactPanelBody">If you are hiring, reviewing emerging engineers, or interested in working together, let's connect.</p>
                     <div class="contact-direct">
                         <a href="mailto:gadb5743@gmail.com"><i class="fas fa-envelope"></i> gadb5743@gmail.com</a>
                         <a href="tel:+250783472305"><i class="fas fa-phone"></i> +250 783 472 305</a>
                         <a href="https://wa.me/250783472305" target="_blank" rel="noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     </div>
                 </div>
-                <form id="portfolio-form" action="https://formspree.io/f/mqaebrjr" method="POST" class="contact-form glass reveal">
-                    <div id="contact-status" class="status-message" aria-live="polite"></div>
+                <form id="portfolio-form" class="contact-form glass reveal">
+                        <div id="contact-status" class="status-message" aria-live="polite"></div>
                     <div class="form-row">
                         <div class="form-group"><label for="name" data-i18n="formName">Name</label><input type="text" id="name" name="name" required data-i18n-placeholder="formNamePlaceholder" placeholder="Your name"></div>
                         <div class="form-group"><label for="email" data-i18n="formEmail">Email</label><input type="email" id="email" name="email" required data-i18n-placeholder="formEmailPlaceholder" placeholder="Your email"></div>
@@ -347,5 +344,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="effects.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+  (function () {
+    emailjs.init("aZOv-L2J5XrKxirBM");
+  })();
+</script>
 </body>
 </html>
